@@ -12,7 +12,6 @@ public:
 	~Controller();
 
 	void sendBesked(std::string besked);
-
 	void modtagBesked();
 
 private:

@@ -1,5 +1,6 @@
 #include "ToneKonvertering.h"
 
+
 ToneKonvertering::ToneKonvertering()
 {
 }
