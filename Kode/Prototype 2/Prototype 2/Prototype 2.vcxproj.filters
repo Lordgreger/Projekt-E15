@@ -21,7 +21,16 @@
     <ClCompile Include="Source.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="goertzel.cpp">
+    <ClCompile Include="CharDefinition.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CRC.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DLL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -29,7 +38,16 @@
     <ClInclude Include="ToneKonvertering.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="goertzel.h">
+    <ClInclude Include="CharDefinition.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CRC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DLL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
