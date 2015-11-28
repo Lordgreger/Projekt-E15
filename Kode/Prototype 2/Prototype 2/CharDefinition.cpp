@@ -11,6 +11,12 @@ CharDefinition::~CharDefinition()
 
 }
 
+void CharDefinition::applyCharDef(std::string input)
+{
+	input = charToBinary(input);
+	dll.applySenderDLL(input);
+}
+
 
 std::string CharDefinition::charToBinary(std::string chars)
 {

@@ -96,6 +96,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(SolutionDir)/SFML-2.3.2/lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-network-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+      <PerUserRedirection>true</PerUserRedirection>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -149,18 +151,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Afspil.cpp" />
     <ClCompile Include="CharDefinition.cpp" />
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="CRC.cpp" />
     <ClCompile Include="DLL.cpp" />
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Tone.cpp" />
     <ClCompile Include="ToneKonvertering.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Afspil.h" />
     <ClInclude Include="CharDefinition.h" />
     <ClInclude Include="Controller.h" />
     <ClInclude Include="CRC.h" />
     <ClInclude Include="DLL.h" />
+    <ClInclude Include="Tone.h" />
     <ClInclude Include="ToneKonvertering.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

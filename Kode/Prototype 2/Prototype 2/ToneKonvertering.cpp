@@ -10,6 +10,12 @@ ToneKonvertering::~ToneKonvertering()
 }
 
 
+void ToneKonvertering::applyToneKonv(std::string input)
+{
+	std::vector<int> temp = konverterTilLyd(input);
+	play.sendData(temp);
+}
+
 std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)
 {
 	std::vector<int> output; 							//Der laves en dataholder til output

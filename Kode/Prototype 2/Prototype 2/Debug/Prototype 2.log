@@ -1,21 +1,20 @@
-﻿Build started 24-Nov-15 11:36:49 AM.
-     1>Project "C:\Users\black_000\Dropbox\Programmering\Prototype 2\Prototype 2\Prototype 2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 29-11-15 00:07:22.
+     1>Project "C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\Prototype 2\Prototype 2.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\black_000\Dropbox\Programmering\Prototype 2\/SFML-2.3.2/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt goertzel.cpp Source.cpp ToneKonvertering.cpp
-         ToneKonvertering.cpp
-     1>c:\users\black_000\dropbox\programmering\prototype 2\prototype 2\tonekonvertering.cpp(17): warning C4018: '<': signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /I"C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\/SFML-2.3.2/include" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
          Source.cpp
-         goertzel.cpp
-     1>c:\users\black_000\dropbox\programmering\prototype 2\prototype 2\goertzel.cpp(121): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-     1>c:\users\black_000\dropbox\programmering\prototype 2\prototype 2\goertzel.cpp(122): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\black_000\Dropbox\Programmering\Prototype 2\Debug\Prototype 2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\black_000\Dropbox\Programmering\Prototype 2\/SFML-2.3.2/lib" "sfml-main-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\black_000\Dropbox\Programmering\Prototype 2\Debug\Prototype 2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\black_000\Dropbox\Programmering\Prototype 2\Debug\Prototype 2.lib" /MACHINE:X86 Debug\goertzel.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\Debug\Prototype 2.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\/SFML-2.3.2/lib" "sfml-main-d.lib" "sfml-graphics-d.lib" "sfml-window-d.lib" "sfml-system-d.lib" "sfml-audio-d.lib" "sfml-network-d.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\Debug\Prototype 2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\Debug\Prototype 2.lib" /MACHINE:X86 Debug\Afspil.obj
+         Debug\CharDefinition.obj
+         Debug\Controller.obj
+         Debug\CRC.obj
+         Debug\DLL.obj
          Debug\Source.obj
+         Debug\Tone.obj
          Debug\ToneKonvertering.obj
-         Prototype 2.vcxproj -> C:\Users\black_000\Dropbox\Programmering\Prototype 2\Debug\Prototype 2.exe
-     1>Done Building Project "C:\Users\black_000\Dropbox\Programmering\Prototype 2\Prototype 2\Prototype 2.vcxproj" (Build target(s)).
+         Prototype 2.vcxproj -> C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\Debug\Prototype 2.exe
+     1>Done Building Project "C:\Users\Gregers\Desktop\Projekt-E15\Projekt-E15\Kode\Prototype 2\Prototype 2\Prototype 2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:04.34
+Time Elapsed 00:00:00.57

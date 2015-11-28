@@ -1,4 +1,5 @@
 #pragma once
+#include "DLL.h"
 #include <string>
 #include <bitset>
 
@@ -8,13 +9,15 @@ public:
 	CharDefinition();
 	~CharDefinition();
 
+	void applyCharDef(std::string input);
+
+protected:
 	std::string charToBinary(std::string chars);
 	std::string binaryToChar(std::string bins);
 
-protected:
 	std::string intToString(int bit);
-
 	std::string charsDefined;
+	DLL dll;
 
 };
 

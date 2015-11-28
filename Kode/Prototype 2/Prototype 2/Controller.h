@@ -16,7 +16,5 @@ public:
 
 private:
 	CharDefinition CharDeff;
-	DLL DLL;
-	ToneKonvertering ToneKonvertering;
 
 };
