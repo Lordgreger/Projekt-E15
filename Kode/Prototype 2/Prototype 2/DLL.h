@@ -8,7 +8,7 @@ public:
 	DLL();
 	~DLL();
 
-	void applySenderDLL(std::string bitstreng);				//Tilføjer CRC og stuffing til bitstreng
+	void applySenderDLL(std::string bitstreng);						//Tilføjer CRC og stuffing til bitstreng
 	std::string applyRecieverDLL(std::string bitstreng);			//Returnerer string ved korrekt CRC, ellers error 1
 
 protected:
