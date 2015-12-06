@@ -53,7 +53,7 @@ int Afspil::afspilToner()
 												//Vi looper objektet
 	Sound.play();								//Vi afspiller objektet
 
-	sf::sleep(sf::milliseconds(4050));;
+	sf::sleep(sf::milliseconds(4050));
 	
 
 	
