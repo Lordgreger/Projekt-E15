@@ -28,6 +28,7 @@ std::string ToneKonvertering::returnBitString()
 
 	}
 	optag.stop();
+
 	return konverterTilBit(optag.getBesked());
 }
 

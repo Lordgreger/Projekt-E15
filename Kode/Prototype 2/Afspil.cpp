@@ -32,6 +32,9 @@ void Afspil::makeRaw0(std::vector<int> input)
 	{
 		for (int i = 0; i < ((dtmfToner[input[k]]->getRaw()).size()); i++)
 			raw0.push_back((dtmfToner[input[k]]->getRaw())[i]);
+			
+		/*for (size_t i = 0; i < ((dtmfToner[input[k]]->getRaw()).size()); i++)
+			raw0.push_back((dtmfToner[16]->getRaw())[i]);*/
 	}
 }
 
@@ -39,7 +42,7 @@ int Afspil::afspilToner(int længdeAfElementer)
 {
 	sf::SoundBuffer Buffer;						//Vi opretter et Buffer objekt
 	if (!Buffer.loadFromSamples					//Bufferen loades med vores sinus kurve, antalet af samples, 
-		(&raw0[0], længdeAfElementer * 5113, 1, SAMPLE_RATE))		//kanaler (1 = mono), og sample rate
+		(&raw0[0], længdeAfElementer * SAMPLES, 1, SAMPLE_RATE))		//kanaler (1 = mono), og sample rate
 	{
 		std::cerr << "Loading failed!" << std::endl;
 		return 1;								//Siger der er fejl hvis det ikke kan lade sig gøre
@@ -50,7 +53,7 @@ int Afspil::afspilToner(int længdeAfElementer)
 												//Vi looper objektet
 	Sound.play();								//Vi afspiller objektet
 
-	sf::sleep(sf::seconds((længdeAfElementer * 5113)/ SAMPLE_RATE + 0.5));
+	sf::sleep(sf::seconds((længdeAfElementer * SAMPLES)/ SAMPLE_RATE + 10));
 	
 	
 	return 0;
