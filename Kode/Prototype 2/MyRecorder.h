@@ -9,10 +9,10 @@ class MyRecorder : public sf::SoundRecorder
 {
 public:
 	MyRecorder();
+	~MyRecorder();
 
 	vector<int> getBesked();
 	bool getNyBesked();
-	~MyRecorder();
 
 protected:
 	virtual bool onStart();

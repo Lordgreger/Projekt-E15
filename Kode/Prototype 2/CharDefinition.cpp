@@ -17,6 +17,11 @@ void CharDefinition::applyCharDef(std::string input)
 	dll.applySenderDLL(input);
 }
 
+std::string CharDefinition::recieverCharDef()
+{
+	return binaryToChar(dll.applyRecieverDLL());
+}
+
 
 std::string CharDefinition::charToBinary(std::string chars)
 {

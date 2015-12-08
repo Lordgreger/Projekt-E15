@@ -16,6 +16,21 @@ void ToneKonvertering::applyToneKonv(std::string input)
 	play.sendData(temp);
 }
 
+std::string ToneKonvertering::returnBitString()
+{
+	if (!MyRecorder::isAvailable()) //Tjekker om der er en mic
+	{
+		std::cout << "fix mic";
+	}
+	optag.start();
+	while (!optag.getNyBesked())
+	{
+
+	}
+	optag.stop();
+	return konverterTilBit(optag.getBesked());
+}
+
 std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)
 {
 	std::vector<int> output; 							//Der laves en dataholder til output

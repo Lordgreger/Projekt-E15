@@ -12,7 +12,7 @@ public:
 	~Controller();
 
 	void sendBesked(std::string besked);
-	void modtagBesked();
+	std::string modtagBesked();
 
 private:
 	CharDefinition CharDeff;

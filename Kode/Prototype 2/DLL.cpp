@@ -60,8 +60,10 @@ void DLL::applySenderDLL(std::string bitstreng)
 	ToneKonv.applyToneKonv(bitstreng);
 }
 
-std::string DLL::applyRecieverDLL(std::string bitstreng)
+std::string DLL::applyRecieverDLL()
 {
+	std::string bitstreng = ToneKonv.returnBitString();
+
 	bitstreng = removeStuffing(bitstreng);	
 
 	std::string tempCRC = "";
@@ -70,7 +72,7 @@ std::string DLL::applyRecieverDLL(std::string bitstreng)
 
 	bitstreng.erase(bitstreng.size() - 32 , 32);
 
-	if (CRC.runCRC(bitstreng) == tempCRC)
-		return bitstreng;
-	return "ERROR: CRC NOT TRUE";
+	if (CRC.runCRC(bitstreng) != tempCRC)
+		std::cout << "ERROR: CRC NOT TRUE" << std::endl;
+	return bitstreng;
 }

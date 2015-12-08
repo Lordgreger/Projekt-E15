@@ -14,7 +14,7 @@ void Controller::sendBesked(std::string besked)
 	CharDeff.applyCharDef(besked);
 }
 
-void Controller::modtagBesked()
+std::string Controller::modtagBesked()
 {
-
+	return CharDeff.recieverCharDef();
 }

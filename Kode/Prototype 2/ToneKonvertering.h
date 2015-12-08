@@ -1,5 +1,6 @@
 #pragma once
 #include "Afspil.h"
+#include "MyRecorder.h"
 #include <vector>
 #include <string>
 
@@ -10,6 +11,7 @@ public:
 	~ToneKonvertering();
 
 	void applyToneKonv(std::string input);
+	std::string returnBitString();
 
 protected:
 	std::vector<int> konverterTilLyd(std::string bitstreng);		//Konverterer en string af bits til en vector af toner
@@ -17,4 +19,5 @@ protected:
 
 	std::string stringDef[8] = { "000","001","010","011","100","101","110","111" }; //De forskellige binære kombinationer
 	Afspil play;
+	MyRecorder optag;
 };

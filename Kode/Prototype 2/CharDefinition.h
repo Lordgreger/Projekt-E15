@@ -10,6 +10,7 @@ public:
 	~CharDefinition();
 
 	void applyCharDef(std::string input);
+	std::string recieverCharDef();
 
 protected:
 	std::string charToBinary(std::string chars);
