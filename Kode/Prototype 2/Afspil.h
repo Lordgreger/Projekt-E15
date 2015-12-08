@@ -14,8 +14,8 @@ public:
 
 protected:
 	void addToner(std::vector<int> input);
-	void makeRaw0(int lenght);
-	int afspilToner();
+	void makeRaw0(std::vector<int> input);
+	int afspilToner(int længdeAfElementer);
 
 	std::vector<Tone*> dtmfToner = { new Tone(697, 1209), new Tone(697, 1336), new Tone(697, 1477), new Tone(697, 1633),
 									 new Tone(770, 1209), new Tone(770, 1336), new Tone(770, 1477), new Tone(770, 1633),

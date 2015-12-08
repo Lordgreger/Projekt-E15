@@ -12,9 +12,10 @@ Afspil::~Afspil()
 
 void Afspil::sendData(std::vector<int> input)
 {
-	addToner(input);
-	makeRaw0(input.size());
-	afspilToner();
+	//tonerTilAfspilning;
+	//addToner(input);
+	makeRaw0(input);
+	afspilToner(input.size());
 }
 
 void Afspil::addToner(std::vector<int> input)
@@ -25,24 +26,22 @@ void Afspil::addToner(std::vector<int> input)
 	}
 }
 	
-void Afspil::makeRaw0(int lenght)
+void Afspil::makeRaw0(std::vector<int> input)
 {
-	for (int k = 0; k < dtmfToner.size(); k++)
+	for (int k = 0; k < input.size(); k++)
 	{
-		for (int i = 0; i < ((dtmfToner[k]->getRaw()).size())/lenght; i++)
+		for (int i = 0; i < ((dtmfToner[input[k]]->getRaw()).size())/8; i++)
 		{
-			raw0.push_back((dtmfToner[k]->getRaw())[i]);
+			raw0.push_back((dtmfToner[input[k]]->getRaw())[i]);
 		}
-	//std::cout << k << std::endl;
-	//std::cout << raw0.size() << std::endl;
 	}
 }
 
-int Afspil::afspilToner()
+int Afspil::afspilToner(int længdeAfElementer)
 {
 	sf::SoundBuffer Buffer;						//Vi opretter et Buffer objekt
 	if (!Buffer.loadFromSamples					//Bufferen loades med vores sinus kurve, antalet af samples, 
-		(&raw0[0], SAMPLES, 1, SAMPLE_RATE))		//kanaler (1 = mono), og sample rate
+		(&raw0[0], længdeAfElementer * 5512.5, 1, SAMPLE_RATE))		//kanaler (1 = mono), og sample rate
 	{
 		std::cerr << "Loading failed!" << std::endl;
 		return 1;								//Siger der er fejl hvis det ikke kan lade sig gøre
@@ -53,9 +52,8 @@ int Afspil::afspilToner()
 												//Vi looper objektet
 	Sound.play();								//Vi afspiller objektet
 
-	sf::sleep(sf::milliseconds(4050));
+	sf::sleep(sf::seconds((længdeAfElementer * 5512.5)/ SAMPLE_RATE + 0.020));
 	
-
 	
 	return 0;
 }
