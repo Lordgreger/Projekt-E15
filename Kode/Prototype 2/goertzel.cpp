@@ -120,8 +120,6 @@ int Goertzel::findTones(const sf::Int16* samples)
 
 int Goertzel::detectFreqs(const sf::Int16* samples, int K)
 {
-	
-
 	double f = K / (double)N;
 	double omega = 2 * pi * f;
 	double s = 0;
@@ -140,9 +138,6 @@ int Goertzel::detectFreqs(const sf::Int16* samples, int K)
 	power = pow(power, 2) / 20000000000;
 	
 	return power;
-	
-
-
 }
 
 
