@@ -33,7 +33,7 @@ std::string ToneKonvertering::returnBitString()
 
 std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)
 {
-	std::vector<int> output; 							//Der laves en dataholder til output
+	std::vector<int> output = { 15 }; 					//Der laves en dataholder til output
 	std::string tempString;								//tempString bruges til midlertidig dataholder til sæt af bitstreng
 	int i = 0;											//Index sættes til 0
 	while (i < bitstreng.length())						//Når i er mindre end længden af bitstreng køres for loopet
@@ -64,7 +64,7 @@ std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)
 			}
 		}
 	}
-
+	output.push_back(14);
 	return output;
 }
 
