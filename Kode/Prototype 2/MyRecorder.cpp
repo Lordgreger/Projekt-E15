@@ -32,6 +32,7 @@ bool MyRecorder::onProcessSamples(const sf::Int16* samples, std::size_t sampleCo
 	if (currentTone == 14)										//14 er slutbit(tone)
 	{
 		nyBesked = true;
+		resultatVektor.erase(resultatVektor.begin());
 		return false;
 	}
 	
@@ -47,6 +48,8 @@ bool MyRecorder::onProcessSamples(const sf::Int16* samples, std::size_t sampleCo
 			resultatVektor.push_back(currentTone);
 		}
 	}
+
+	std::cout << currentTone << std::endl;
 
 	return true;
 }
