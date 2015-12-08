@@ -21,7 +21,7 @@ Tone::Tone(int fekvens1, int fekvens2)
 	f2 = fekvens2;
 
 
-	const unsigned SAMPLES = 44100;				//Antallet af samples skal matche sample rate, fordi vi sampler over 1 sekund 
+	const unsigned SAMPLES = 5113;				//Antallet af samples skal matche sample rate, fordi vi sampler over 1 sekund 
 	const unsigned SAMPLE_RATE = 44100;			//Standard sampling rate for cd'er
 	const unsigned AMPLITUDE = 10000;			//Der skal være en amplitude for volume
 												//maks 32767/2 fordi vi har et 16 signed array, og 2 bøgler lagt sammen må maks give 32767

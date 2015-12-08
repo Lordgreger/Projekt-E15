@@ -24,6 +24,6 @@ protected:
 	std::vector<Tone*> tonerTilAfspilning;
 	const unsigned SAMPLES = 44100;
 	const unsigned SAMPLE_RATE = 44100;
-	std::vector <sf::Int16>  raw0;
+	std::vector <sf::Int16>  raw0 = {0};
 };
 
