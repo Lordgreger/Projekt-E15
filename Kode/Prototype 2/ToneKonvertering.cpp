@@ -29,7 +29,18 @@ std::string ToneKonvertering::returnBitString()
 	}
 	optag.stop();
 
-	return konverterTilBit(optag.getBesked());
+	vector<int> output = optag.getBesked();
+
+	output.erase(output.begin());
+
+	for (size_t i = 0; i < output.size(); i++)
+	{
+		std::cout << output[i] << std::endl;
+	}
+
+	//std::cout << "Luder " << konverterTilBit(output) << std::endl;
+
+	return konverterTilBit(output);
 }
 
 std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)

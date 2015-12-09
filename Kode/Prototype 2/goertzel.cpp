@@ -33,7 +33,7 @@ int Goertzel::findTone(const sf::Int16* samples)
 		}
 	}
 
-	y = 150000;
+	y = 400000;                     //LORT
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -49,7 +49,7 @@ int Goertzel::findTone(const sf::Int16* samples)
 		std::cout << resultArrayB[i] << std::endl;
 	}*/
 
-	if (y > 150000 )
+	if (y > 400000 )                               //LORT
 	{	
 		
 	//	std::cout << max[1] + (max[0]) * 4 << "      " << y << std::endl;

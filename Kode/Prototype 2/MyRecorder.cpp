@@ -9,7 +9,7 @@ MyRecorder::MyRecorder()
 bool MyRecorder::onStart()
 {
 	beskedBegyndt = false;
-	setProcessingInterval(sf::milliseconds(25));
+	setProcessingInterval(sf::milliseconds(10));
 	return true;
 }
 
@@ -20,36 +20,53 @@ bool MyRecorder::onProcessSamples(const sf::Int16* samples, std::size_t sampleCo
 		sf::sleep(sf::milliseconds(50));
 	}
 	
-	int currentTone = goertzel.findTone(samples);
+	unsigned int currentTone = goertzel.findTone(samples);
+
+	if (currentTone == 16)
+	{
+		return true;
+	}
+
+	if (!(debounceBuffer1 == debounceBuffer2 && debounceBuffer1 == currentTone && debounceBuffer2 == currentTone))
+	{
+		debounceBuffer2 = debounceBuffer1;
+		debounceBuffer1 = currentTone;
+		//std::cout << currentTone << " " << debounceBuffer1 << " " << debounceBuffer2 << std::endl;
+		return true;
+	}
+
+	std::cout << currentTone << " " << debounceBuffer1 << " " << debounceBuffer2 << std::endl;
+	//std::cout << currentTone << std::endl;
 
 	if (currentTone == 15)										//15 er startbitbit(tone)
 	{
-		resultatVektor = {0};
+		debounceBuffer2 = debounceBuffer1;
+		debounceBuffer1 = currentTone;
 		beskedBegyndt = true;
 		return true;
 	}
 	
 	if (currentTone == 14)										//14 er slutbit(tone)
 	{
+		debounceBuffer2 = debounceBuffer1;
+		debounceBuffer1 = currentTone;
 		nyBesked = true;
-	//	resultatVektor.erase(resultatVektor.begin());
 		return false;
-	}
-	
-	if (currentTone == 16)
-	{
-		return true;
 	}
 
 	if (beskedBegyndt)
 	{
 		if (resultatVektor.back() != currentTone)
 		{
+			//std::cout << currentTone << std::endl;
 			resultatVektor.push_back(currentTone);
 		}
 	}
 
-	std::cout << currentTone << std::endl;
+	debounceBuffer2 = debounceBuffer1;
+	debounceBuffer1 = currentTone;
+
+	//std::cout << currentTone << std::endl;
 	
 	return true;
 }

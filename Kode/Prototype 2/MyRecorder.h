@@ -21,7 +21,8 @@ protected:
 
 	bool beskedBegyndt = false;
 	bool nyBesked = false;
-	vector<int> resultatVektor = {0};
+	vector<int> resultatVektor = {16};
+	int debounceBuffer1 = 16;
+	int debounceBuffer2 = 16;
 	Goertzel goertzel;
-	
 };
