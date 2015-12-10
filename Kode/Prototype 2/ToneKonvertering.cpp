@@ -23,7 +23,7 @@ std::string ToneKonvertering::returnBitString()
 		std::cout << "fix mic";
 	}
 	optag.start(8000);
-	while (!optag.getNyBesked())
+	while (!optag.getNyBesked() && )
 	{
 
 	}
