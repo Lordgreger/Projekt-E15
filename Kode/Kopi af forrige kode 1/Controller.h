@@ -1,7 +1,7 @@
 #pragma once
 #include "CharDefinition.h"
-#include "Login.h"
-#include "Files.h"
+#include "DLL.h"
+#include "ToneKonvertering.h"
 #include <string>
 
 
@@ -13,12 +13,8 @@ public:
 
 	void sendBesked(std::string besked);
 	std::string modtagBesked();
-	bool testLogin(std::string uName, std::string pWord);
-	void createUser(std::string uName, std::string pWord);
-	void gethistory(std::string uName);
 
-protected:
+private:
 	CharDefinition CharDeff;
-	Login login;
 
 };
