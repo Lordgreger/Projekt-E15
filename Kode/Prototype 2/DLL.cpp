@@ -68,9 +68,13 @@ std::string DLL::applyRecieverDLL()
 
 	std::string tempCRC = "";
 
-	tempCRC = tempCRC.append(bitstreng, bitstreng.size() - 32, 32);
+	//tempCRC = tempCRC.append(bitstreng, bitstreng.size() - 32, 32);
 
-	bitstreng.erase(bitstreng.size() - 32 , 32);
+	//bitstreng.erase(bitstreng.size() - 32 , 32);
+
+	tempCRC = tempCRC.append(bitstreng, bitstreng.size() - 8, 8);
+
+	bitstreng.erase(bitstreng.size() - 8, 8);
 
 	if (CRC.runCRC(bitstreng) != tempCRC)
 		std::cout << "ERROR: CRC NOT TRUE" << std::endl;
