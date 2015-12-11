@@ -78,10 +78,10 @@ std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)
 	}
 	output.push_back(14);
 
-	for (size_t i = 0; i < output.size(); i++)
-	{
-		std::cout << output[i] << std::endl;
-	}
+	//for (size_t i = 0; i < output.size(); i++)          //Udskriv vektoren
+	//{
+	//	std::cout << output[i] << std::endl;
+	//}
 
 	return output;
 }
