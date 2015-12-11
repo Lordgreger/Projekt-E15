@@ -13,17 +13,17 @@ firstScreen:
 
 	if (tempValg == "1")
 	{ 
-		system("cls");
+		std::system("cls");
 		goto loginScreen;
 	}
 
 	if (tempValg == "2")
 	{ 
-		system("cls");
+		std::system("cls");
 		goto createUserScreen;
 	}
 
-	system("cls");
+	std::system("cls");
 	goto firstScreen;
 
 
@@ -35,7 +35,7 @@ createUserScreen:
 
 	controller.createUser(user,pass);
 
-	system("cls");
+	std::system("cls");
 	goto firstScreen;
 
 
@@ -47,11 +47,11 @@ loginScreen:
 
 	if (controller.testLogin(user, pass))
 	{ 
-		system("cls");
+		std::system("cls");
 		goto interfaceScreen;
 	}
 
-	system("cls");
+	std::system("cls");
 	std::cout << "Forkert login" << std::endl;
 	goto firstScreen;
 
@@ -66,19 +66,19 @@ interfaceScreen:
 
 	if (tempValg == "1")
 	{ 
-		system("cls");
+		std::system("cls");
 		goto sendBeskedScreen;
 	}
 
 	if (tempValg == "2")
 	{ 
-		system("cls");
+		std::system("cls");
 		goto modtagBeskedScreen;
 	}
 
 	if (tempValg == "3")
 	{
-		system("cls");
+		std::system("cls");
 		goto historikScreen;
 	}
 
@@ -86,11 +86,11 @@ interfaceScreen:
 	{ 
 		user = "";
 		pass = "";
-		system("cls");
+		std::system("cls");
 		goto firstScreen;
 	}
 
-	system("cls");
+	std::system("cls");
 	goto interfaceScreen;
 
 
@@ -99,18 +99,41 @@ sendBeskedScreen:
 	std::cin.ignore();
 	std::getline(std::cin, tempValg);
 
+	std::system("cls");
+	std::cout << "Sender besked...";
+
 	controller.sendBesked(tempValg, user);
 
-	system("cls");
+	std::system("cls");
 	goto interfaceScreen;
 
 
 modtagBeskedScreen:
+	tempValg2 = "";
 	std::cout << "Modtager besked..." << std::endl;
-	std::cout << controller.modtagBesked() << std::endl;
+	tempValg2 = controller.modtagBesked(user);
+	std::system("cls");
 
-	system("cls");
-	goto interfaceScreen;
+modtagRepeatScreen:
+	std::cout << tempValg2 << std::endl;
+
+	std::cout << std::endl << "Skriv 1 for at g\x86 tilbage" << std::endl;
+
+	while (true)
+	{
+		std::cin >> tempValg;
+
+		if (tempValg == "1")
+		{
+			std::system("cls");
+			goto interfaceScreen;
+		}
+
+		std::system("cls");
+		goto modtagRepeatScreen;
+	}
+
+
 
 
 historikScreen:
@@ -123,23 +146,23 @@ historikScreen:
 
 	if (tempValg == "1")
 	{
-		system("cls");
+		std::system("cls");
 		goto heleHistorikScreen;
 	}
 
 	if (tempValg == "2")
 	{
-		system("cls");
+		std::system("cls");
 		goto latestHistorikScreen;
 	}
 
 	if (tempValg == "3")
 	{
-		system("cls");
+		std::system("cls");
 		goto interfaceScreen;
 	}
 
-	system("cls");
+	std::system("cls");
 	goto historikScreen;
 
 
@@ -155,7 +178,7 @@ heleHistorikScreen:
 		std::cin >> tempValg;
 		if (tempValg == "1")
 		{
-			system("cls");
+			std::system("cls");
 			goto historikScreen;
 		}
 	}
@@ -173,7 +196,7 @@ latestHistorikScreen:
 		std::cin >> tempValg;
 		if (tempValg == "1")
 		{
-			system("cls");
+			std::system("cls");
 			goto historikScreen;
 		}
 	}
