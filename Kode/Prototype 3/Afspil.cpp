@@ -29,6 +29,7 @@ void Afspil::addToner(std::vector<int> input)
 void Afspil::makeRaw0(std::vector<int> input)
 {
 	raw0 = { 0 };
+
 	for (int k = 0; k < input.size(); k++)
 	{
 		for (int i = 0; i < ((dtmfToner[input[k]]->getRaw()).size()); i++)

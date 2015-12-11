@@ -11,16 +11,20 @@ Controller::~Controller()
 
 void Controller::sendBesked(std::string besked, std::string uName)
 {
-	besked = uName + ": " + besked;
-	CharDeff.applyCharDef(besked);
+	std::string tempBesked = uName + ": " + besked;
+	CharDeff.applyCharDef(tempBesked);
 	Files historik(uName);
-	historik.AddNewLine(besked);
+	historik.AddNewLine(tempBesked);
 	historik.~Files();
 }
 
-std::string Controller::modtagBesked()
+std::string Controller::modtagBesked(std::string uName)
 {
-	return CharDeff.recieverCharDef();
+	std::string besked = CharDeff.recieverCharDef();
+	Files historik(uName);
+	historik.AddNewLine(besked);
+	historik.~Files();
+	return besked;
 }
 
 bool Controller::testLogin(std::string uName, std::string pWord)

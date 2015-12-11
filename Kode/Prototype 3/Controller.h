@@ -12,7 +12,7 @@ public:
 	~Controller();
 
 	void sendBesked(std::string besked, std::string uName);
-	std::string modtagBesked();
+	std::string modtagBesked(std::string uName);
 	bool testLogin(std::string uName, std::string pWord);
 	void createUser(std::string uName, std::string pWord);
 	void getHeleHistory(std::string uName);
