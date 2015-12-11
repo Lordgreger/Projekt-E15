@@ -91,7 +91,7 @@ std::vector<int> ToneKonvertering::konverterTilLyd(std::string bitstreng)
 
 std::string ToneKonvertering::konverterTilBit(std::vector<int> input)
 {
-	std::string output;
+	std::string output = "";
 
 	for (size_t i = 0; i < input.size(); i++)
 	{

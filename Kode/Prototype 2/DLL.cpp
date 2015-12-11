@@ -54,15 +54,19 @@ std::string DLL::removeStuffing(std::string bitstreng)
 
 void DLL::applySenderDLL(std::string bitstreng)
 {
-	bitstreng = bitstreng + CRC.runCRC(bitstreng);
-	bitstreng = stuffing(bitstreng);
+	std::string output = "";
+	output = bitstreng;
+	output = bitstreng + CRC.runCRC(bitstreng);
+	output = stuffing(output);
 	//std::cout << bitstreng << std::endl;
 	ToneKonv.applyToneKonv(bitstreng);
 }
 
 std::string DLL::applyRecieverDLL()
 {
-	std::string bitstreng = ToneKonv.returnBitString();
+	std::string bitstreng = "";
+
+	bitstreng = ToneKonv.returnBitString();
 
 	bitstreng = removeStuffing(bitstreng);	
 
