@@ -56,10 +56,12 @@ void DLL::applySenderDLL(std::string bitstreng)
 {
 	std::string output = "";
 	output = bitstreng;
-	output = bitstreng + CRC.runCRC(bitstreng);
+
+	output = output + CRC.runCRC(output);
+
 	output = stuffing(output);
 	//std::cout << bitstreng << std::endl;
-	ToneKonv.applyToneKonv(bitstreng);
+	ToneKonv.applyToneKonv(output);
 }
 
 std::string DLL::applyRecieverDLL()
