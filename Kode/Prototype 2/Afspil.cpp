@@ -53,7 +53,7 @@ int Afspil::afspilToner(int længdeAfElementer)
 												//Vi looper objektet
 	Sound.play();								//Vi afspiller objektet
 
-	sf::sleep(sf::seconds((længdeAfElementer * SAMPLES)/ SAMPLE_RATE + 1));
+	sf::sleep(sf::seconds((længdeAfElementer * SAMPLES)/ SAMPLE_RATE + 10));
 	
 	
 	return 0;

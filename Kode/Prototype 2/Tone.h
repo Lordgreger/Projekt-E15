@@ -14,7 +14,7 @@ public:
 	std::vector <sf::Int16> getRaw();
 
 protected:
-	const unsigned SAMPLES = 1600;		//Forholdet af SAMPLES og SAMPLE_RATE skal passe i forhold til 1 sekund
+	const unsigned SAMPLES = 2000;		//Forholdet af SAMPLES og SAMPLE_RATE skal passe i forhold til 1 sekund
 	const unsigned SAMPLE_RATE = 8000;
 	const unsigned AMPLITUDE = 5000;	//Der skal være en amplitude for volume
 	const double TWO_PI = 6.28318;		//maks 32767/2 fordi vi har et 16 signed array, og 2 bøgler lagt sammen må maks give 32767
