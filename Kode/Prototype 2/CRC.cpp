@@ -1,105 +1,48 @@
 #include "CRC.h"
 
 
+
 CRC::CRC()
 {
-	charsDefined = "0123456789abcdefghijklmnopqrstuvwxyzæøåABCDEFGHIJKLMNOPQRSTUVWXYZÆØÅ !#¤%&/()=+?,;.:-_'*<>\"";
 }
+
 
 CRC::~CRC()
 {
 }
 
-std::string CRC::runCRC(std::string aString)
+std::string CRC::runCRC(std::string message)
 {
-	std::string tempString = aString;
-	const char *tempChar = tempString.c_str();
+	std::string messageString = message;							//Original besked
+	std::string poly = "111010101";									//Polynomial division
 
-	crc = 0;
-	buf = tempChar;
-	len = strlen(buf);
-	rc_crc32();
-	convertCRC();
-	return returnSum;
-}
+	std::string aug = messageString + "00000000";					//Padded besked, bliver senere til remainder indtil denne bliver checksummen
+	std::string tempRemainderString;
+	std::string tempAug;
 
-void CRC::rc_crc32()
-{
-	static uint32_t table[256];
-	static int have_table = 0;
-	uint32_t rem;
-	uint8_t octet;
-	int i, j;
-	const char *p, *q;
+	std::bitset<9> divisor(poly);									//Bit divisor
+	std::bitset<9> tempRemainder;									//holder til besked
 
-	/* This check is not thread safe; there is no mutex. */
-	if (have_table == 0) {
-		/* Calculate CRC table. */
-		for (i = 0; i < 256; i++) {
-			rem = i;  /* remainder from polynomial division */
-			for (j = 0; j < 8; j++) {
-				if (rem & 1) {
-					rem >>= 1;
-					rem ^= 0xedb88320;
-				}
-				else
-					rem >>= 1;
-			}
-			table[i] = rem;
-		}
-		have_table = 1;
-	}
-
-	crc = ~crc;
-	q = buf + len;
-	for (p = buf; p < q; p++) {
-		octet = *p;  /* Cast to unsigned octet. */
-		crc = (crc >> 8) ^ table[(crc & 0xff) ^ octet];
-	}
-	checksum = ~crc;
-}
-
-void CRC::convertCRC()
-{
-	std::stringstream ss;
-	ss << std::hex << checksum;
-	std::string tempString;
-	ss >> tempString;
-
-	returnSum = hexToString(tempString);
-}
-
-std::string CRC::hexToString(std::string hex)
-{
-	std::string output = "";
-	for (size_t i = 0; i <= hex.size(); i++)
+	while (aug.size() > 8)											//imens beskeden er større end 8 (size of checksum!)
 	{
-		for (size_t k = 0; k < charsDefined.size(); k++)
+		std::bitset<9> remainder(std::string(aug, 0, 9));			//Tag de 9 første bit
+
+		if (remainder[8] == 1)										//Hvis det første bit er sat (!!! Dette læses bitvist, fra højre mod venstre!!!)
 		{
-			if (hex[i] == charsDefined[k])
-			{
-				output += intToStringHex(k);
-			}
+			tempRemainder = remainder ^ divisor;					//Udfør polynomial division via "xor"
+
+			tempRemainderString = tempRemainder.to_string();
+			tempAug = "";
+			tempAug.append(aug, 9, aug.size());
+
+			aug = tempRemainderString + tempAug;					//Saml resultat og resterende besked
+		}
+		else														//Hvis det første bit ikke er sat, så skal beskeden shiftes mod venstre
+		{
+			aug.erase(aug.begin());									//Sletter det første bit i beskeden
 		}
 	}
-	return output;
-}
 
-std::string CRC::intToStringHex(int bit)
-{
-	std::string binary = "";
-	for (int i = 1; i <= 4; i++)
-	{
-		if (std::bitset<4>(bit)[4 - i] == 1)
-		{
-			binary += "1";
-		}
-		else
-		{
-			binary += "0";
-		}
-	}
-	//binary += " ";
-
-	return binary;
+	//std::cout << "checksum: " << aug << std::endl;					//Output checksum
+	return aug;
 }
