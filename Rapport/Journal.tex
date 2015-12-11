@@ -1,0 +1,47 @@
+\documentclass[a4paper,11pt,oneside]{article}
+\input{style.tex}
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{comment}
+
+%\usepackage[
+%backend=biber,
+%style=alphabetic,
+%sorting=ynt
+%]{biblatex}
+%\addbibresource{ref.bib}
+
+\begin{document}
+	\input{frontpage}
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+	
+	\input{sections/Abstract}
+%	\pagebreak
+	\input{sections/Forord}
+	\pagebreak
+	
+	\tableofcontents
+	\pagebreak
+	
+	
+	\input{sections/Indledning}
+	\input{sections/Workload}
+%	\pagebreak
+%	\input{sections/Random}
+%	\pagebreak
+%	\input{sections/Whatevs}
+	\pagebreak
+	\input{sections/Konklusion}
+	\pagebreak
+	\input{sections/Perspektivering}
+	\pagebreak
+	
+%	\input{sections/Litteraturliste}
+	%\medskip
+	%\printbibliography[title={Whole bibliography}]
+	\section{Section}
+	Ekstra stuff if needed
+	
+\end{document}

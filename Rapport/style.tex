@@ -1,0 +1,180 @@
+% Add packages
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,danish]{babel}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage{makeidx} % Indexing package
+\usepackage[intoc]{nomencl} % Nomenclature package
+\usepackage{color}
+\usepackage{mathpazo}
+\usepackage[crop=pdfcrop]{pstool}
+\usepackage{multirow}
+\usepackage{textcomp}
+%\usepackage[version=3]{mhchem}
+\usepackage{relsize}
+\usepackage{hyperref}
+\usepackage{textpos}
+\usepackage{indentfirst}
+\usepackage{listings}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{mathptmx}
+\usepackage{lmodern}
+\usepackage{txfonts}
+\usepackage{titlesec}
+	\setcounter{secnumdepth}{4}
+
+%\addto\captionsenglish{\renewcommand{\refname}{Litteraturliste}}
+%\renewcommand{\bibname}{Litteraturliste}
+
+\onehalfspacing
+
+\setlength{\parindent}{1em}
+
+\graphicspath{{pictures/}}
+
+\everymath{\displaystyle}
+
+% Avoid a warning
+\pdfminorversion=5
+
+\EndPreamble
+
+%\usepackage{natbib} % Bibliography package
+%\usepackage{siunitx} % Should stay after \EndPreamble
+
+% Create a theorem environment
+%\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+
+\usepackage{xcolor,calc}
+
+% Enable indexing
+\makeindex
+
+% Enable nomenclature
+\makenomenclature
+
+% Enable line numbering
+%\usepackage{lineno}
+%\pagewiselinenumbers
+%\modulolinenumbers[5]
+
+% Change table of contents name
+\renewcommand*{\contentsname}{Table of Contents}
+
+% Get a signature command
+\makeatletter
+\newcommand*{\getlength}[1]{\strip@pt#1}
+\makeatother
+
+\newlength{\signlength}
+\setlength{\signlength}{0.5\textwidth}
+
+\newcommand{\signature}[1]{%
+\noindent \line(1,0){\getlength{\signlength}}\\
+\noindent #1
+}
+
+% Add measuring units to nomenclature
+\newcommand{\nomunit}[1]{\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+\setlength{\belowcaptionskip}{10pt plus 5pt minus 5pt}
+
+% Company logo
+\def\bCompanyLogo{false}
+
+% A fix for memoir-kluwer
+\renewcommand{\bf}{\textbf}
+
+% Set listings
+\renewcommand\lstlistingname{Code snippet}
+\renewcommand\lstlistlistingname{Code snippet}
+
+\definecolor{white}{gray}{1.0}
+\definecolor{light-gray}{gray}{0.95}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{
+  frame=tb,
+  language=C++,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  numbersep=11pt,                  
+  stepnumber=1,                  
+  captionpos = b,
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  backgroundcolor=\color{white},  
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3,
+  showspaces=false,
+  showtabs=false
+}
+
+
+
+%Other setups
+
+\usepackage{todonotes}
+\graphicspath{{./pictures/}}
+%\usepackage{amsmath}
+
+\hypersetup{
+    colorlinks,
+    citecolor=green,
+    filecolor=magenta,
+    linkcolor=blue,
+    urlcolor=cyan
+}\hypersetup{
+					colorlinks, 
+					linkcolor={black},
+					citecolor={blue!50!black},
+					urlcolor={blue!80!black},
+					}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ #1}}
+\lhead{\korttitel}
+\chead{}
+\rhead{\rightmark}
+\lfoot{\forfattere}
+\cfoot{}
+\rfoot{	\hfill \break
+		\hfill \break
+		\hfill \break 
+		Side \thepage af \pageref{LastPage} \textbf{}}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0.5pt}
+
+\newcommand{\myparagraph}[1]{\paragraph{#1}\mbox{}\par}
+
+\newcommand{\korttitel}{Tin Can Skype}
+\newcommand{\forfattere}{
+Anders Ellinge (aelli14@student.sdu.dk), 
+Anders Rasmussen (andra14@student.sdu.dk)
+	\newline
+Daniel Hviid (dahvi14@student.sdu.dk),
+Mathias Greger (magre14@student.sdu.dk)
+	\newline
+Rasmus Nielsen (rasni14@student.sdu.dk),
+René Haagensen (rehaa14@student.sdu.dk)
+	\newline
+Sarah Darmer (srasm14@student.sdu.dk)}
