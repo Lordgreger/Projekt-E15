@@ -28,6 +28,8 @@ void Afspil::addToner(std::vector<int> input)
 	
 void Afspil::makeRaw0(std::vector<int> input)
 {
+	raw0 = { 0 };
+
 	for (int k = 0; k < input.size(); k++)
 	{
 		for (int i = 0; i < ((dtmfToner[input[k]]->getRaw()).size()); i++)
@@ -54,7 +56,6 @@ int Afspil::afspilToner(int længdeAfElementer)
 	Sound.play();								//Vi afspiller objektet
 
 	sf::sleep(sf::seconds((længdeAfElementer * SAMPLES)/ SAMPLE_RATE + 10));
-	
 	
 	return 0;
 }

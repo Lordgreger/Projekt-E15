@@ -8,6 +8,7 @@ MyRecorder::MyRecorder()
 
 bool MyRecorder::onStart()
 {
+	resultatVektor = { 16 };
 	beskedBegyndt = false;
 	setProcessingInterval(sf::milliseconds(10));
 	return true;
