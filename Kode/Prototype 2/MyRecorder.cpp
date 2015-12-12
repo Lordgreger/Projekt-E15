@@ -22,6 +22,7 @@ bool MyRecorder::onProcessSamples(const sf::Int16* samples, std::size_t sampleCo
 	}
 	
 	unsigned int currentTone = goertzel.findTone(samples);
+	std::cout << currentTone << std::endl;
 
 	if (currentTone == 16)
 	{
