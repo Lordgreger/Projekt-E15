@@ -1,4 +1,4 @@
-#include "C:\Users\black_000\Desktop\Projekt GitHub\Projekt-E15\Kode\Prototype 2\Controller.h"
+#include "C:\Projekt-E15\Projekt-E15\Kode\Prototype 2\Controller.h"
 
 int main()
 {
@@ -30,11 +30,16 @@ firstScreen:
 createUserScreen:
 	std::cout << "Username?" << std::endl;
 	std::cin >> user;
+	
+	std::cin.clear();												//Disse 2 linjer sørger for at ignorere input efter mellemrum
+	std::cin.ignore(numeric_limits<streamsize>::max(), '\n');		//Disse 2 linjer sørger for at ignorere input efter mellemrum
+		
 	std::cout << "Password?" << std::endl;
 	std::cin >> pass;
 
 	controller.createUser(user,pass);
-
+	
+	std::system("pause");
 	std::system("cls");
 	goto firstScreen;
 

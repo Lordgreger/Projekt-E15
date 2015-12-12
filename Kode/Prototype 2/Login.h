@@ -1,6 +1,8 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <iostream>
+#include <sstream>
 
 class Login
 {
@@ -12,5 +14,6 @@ public:
 
 protected:
 	bool validateLogin(std::string useName, std::string pasWord); //Funktion der validerer et login
+	bool testUser(std::string useName);
 };
 
