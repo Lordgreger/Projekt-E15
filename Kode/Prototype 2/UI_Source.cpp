@@ -18,7 +18,7 @@ firstScreen:
 	}
 
 	if (tempValg == "2")									// valg "2" gå til createUserScreen
-	{ 
+	{
 		std::system("cls");
 		goto createUserScreen;
 	}
@@ -33,7 +33,7 @@ createUserScreen:
 	std::cout << "Password?" << std::endl;
 	std::cin >> pass;
 
-	controller.createUser(user,pass);						// opretter bruger
+	controller.createUser(user, pass);						// opretter bruger
 
 	std::system("cls");										// Reset Konsolvindue
 	goto firstScreen;										// retur firstScreen
@@ -46,7 +46,7 @@ loginScreen:
 	std::cin >> pass;
 
 	if (controller.testLogin(user, pass))					// checker om brugernavn og kodeord er korrekt, gå til interfaceScreen
-	{ 
+	{
 		std::system("cls");
 		goto interfaceScreen;
 	}
@@ -65,13 +65,13 @@ interfaceScreen:
 	std::cin >> tempValg;
 
 	if (tempValg == "1")									// valg "1" gå til sendBeskedScreen
-	{ 
+	{
 		std::system("cls");
 		goto sendBeskedScreen;
 	}
 
 	if (tempValg == "2")									// valg "2" gå til modtagBeskedScreen
-	{ 
+	{
 		std::system("cls");
 		goto modtagBeskedScreen;
 	}
@@ -83,19 +83,19 @@ interfaceScreen:
 	}
 
 	if (tempValg == "4")									// valg "4", logout, reset af brugernavn og kodeord, retur firstScreen
-	{ 
+	{
 		user = "";
 		pass = "";
 		std::system("cls");
 		goto firstScreen;
 	}
 
-	std::system("cls");	
+	std::system("cls");
 	goto interfaceScreen;									// forkert valg, retur interfaceScreen
-	
+
 
 sendBeskedScreen:
-	std::cout << "Indtast besked" << std::endl;				
+	std::cout << "Indtast besked" << std::endl;
 	std::cin.ignore();										// stopper aktiv cin
 	std::getline(std::cin, tempValg);						// indtast besked 
 
@@ -114,7 +114,7 @@ modtagBeskedScreen:
 	tempValg2 = controller.modtagBesked(user);				// afventer besked
 	std::system("cls");
 
-	std::cout << tempValg2 << std::endl;					
+	std::cout << tempValg2 << std::endl;
 
 	std::cout << std::endl << "Skriv 1 for at g\x86 tilbage" << std::endl;
 
