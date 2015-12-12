@@ -16,6 +16,7 @@ std::string Transportlag::senderTransport(std::string enTekst)
 	senderBuffer.resize(256);
 	//Initializer
 
+
 	numberOfSequences = enTekst.size() / 80;					//Find antal segmenter der skal sendes
 
 	if (enTekst.size() % 80 != 0)
