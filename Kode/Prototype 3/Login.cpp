@@ -17,11 +17,22 @@ bool Login::testLogin(std::string uName, std::string pWord)
 
 void Login::addUser(std::string uName, std::string pWord)
 {
-	std::ofstream addUser("loginDB.txt", std::ios::app); //Åbn loginDB i append mode
+	if (testUser(uName) == 1)
+	{
+		std::cout << "Brugernavn er taget" << std::endl;
+	}
 
-	addUser << uName << " " << pWord << std::endl; //Append ny bruger data i slutningen af loginDB
+	else
+	{
+		std::ofstream addUser("loginDB.txt", std::ios::app); //Åbn loginDB i append mode
 
-	addUser.close(); //Luk filen loginDB
+		addUser << uName << " " << pWord << std::endl; //Append ny bruger data i slutningen af loginDB
+
+		addUser.close(); //Luk filen loginDB
+
+		std::cout << "Bruger blev oprettet" << std::endl;
+
+	}
 }
 
 bool Login::validateLogin(std::string useName, std::string pasWord)
@@ -35,4 +46,23 @@ bool Login::validateLogin(std::string useName, std::string pasWord)
 			return 1; //hvis true retuner true
 	}
 	return 0; //Hvis ingen passer returner false
+}
+
+bool Login::testUser(std::string useName)
+{
+	std::string userName = useName;			//Henter username
+	std::string tempString;					//Der laves en temporary string til at holde info fra loginDB
+
+	std::ifstream file("loginDB.txt");		//loginDB åbnes
+	while (getline(file, tempString))		//Der anvendes getline til at hente hver token
+	{
+											//extract the first word
+		std::stringstream stream(tempString);
+		stream >> tempString;
+
+
+		if (userName == tempString)			//Username sammenlignes med tempString
+			return 1;						//Returnerer true hvis username er taget
+	}
+	return 0;								//Returnerer false hvis username er ledigt
 }
