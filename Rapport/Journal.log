@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.12)  12 DEC 2015 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.12.12)  12 DEC 2015 17:09
 entering extended mode
 **Journal.tex
 (Journal.tex
@@ -1862,7 +1862,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-(frontpage.tex <pictures/svg2.pdf, id=50, 597.23125pt x 592.8559pt>
+(frontpage.tex <pictures/svg2.pdf, id=54, 597.23125pt x 592.8559pt>
 File: pictures/svg2.pdf Graphic file (type pdf)
 
 <use pictures/svg2.pdf>
@@ -2004,32 +2004,12 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
-<pictures/Workload.png, id=102, 462.72874pt x 325.71687pt>
+<pictures/Workload.png, id=107, 462.72874pt x 325.71687pt>
 File: pictures/Workload.png Graphic file (type png)
 
 <use pictures/Workload.png>
 Package pdftex.def Info: pictures/Workload.png used on input line 5.
 (pdftex.def)             Requested size: 426.7959pt x 300.42355pt.
-) (sections/Konklusion.tex
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
-[7 <./pictures/Workload.png>]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 1.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 1.
 )
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2038,87 +2018,45 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 39.
+(babel)             in language  on input line 32.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 39.
-[8] (sections/Perspektivering.tex
+(babel)             in language  on input line 32.
+[7 <./pictures/Workload.png>] (subsections/Teori.tex
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 1.
+) (subsections/Teori.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 )
 
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
+! LaTeX Error: File `subsections/.tex' not found.
 
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 41.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 41.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 41.
-[9]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 45.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 45.
+Type X to quit or <RETURN> to proceed,
+or enter new name. (Default extension: tex)
+
+Enter file name: 
+! Emergency stop.
+<read *> 
+         
+l.50 	\input{subsections/}
+                          
+*** (cannot \read from terminal in nonstop modes)
+
  
-AED: lastpage setting LastPage
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 13.59999pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 48.
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 48.
-[10]
-Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 48.
-Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 48.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
- (Journal.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
-Package rerunfilecheck Info: File `Journal.out' has not changed.
-(rerunfilecheck)             Checksum: 7A6A796610D0046B267B3863B4F1F7E7;649.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
- ) 
 Here is how much of TeX's memory you used:
- 32766 strings out of 493673
- 638287 string characters out of 3141526
+ 32762 strings out of 493673
+ 638255 string characters out of 3141526
  783713 words of memory out of 3000000
- 35405 multiletter control sequences out of 15000+200000
+ 35404 multiletter control sequences out of 15000+200000
  57990 words of font info for 129 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,12n,97p,10363b,814s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/
-utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb
->
-Output written on Journal.pdf (10 pages, 183316 bytes).
-PDF statistics:
- 157 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 34415 words of extra memory for PDF output out of 35830 (max. 10000000)
-
+!  ==> Fatal error occurred, no output PDF file produced!
