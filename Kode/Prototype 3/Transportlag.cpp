@@ -124,6 +124,7 @@ std::string Transportlag::receiverTransport()
 			for (size_t k = 0; k < 10; k++)
 			{
 				receiverBuffer[0] = waitForMessage();
+				//std::cout << receiverBuffer[0] << std::endl;
 
 				if (receiverBuffer[0] != "Fejl: No message!")
 				{
