@@ -114,7 +114,6 @@ modtagBeskedScreen:
 	tempValg2 = controller.modtagBesked(user);				// afventer besked
 	std::system("cls");
 
-modtagRepeatScreen:
 	std::cout << tempValg2 << std::endl;					
 
 	std::cout << std::endl << "Skriv 1 for at g\x86 tilbage" << std::endl;
@@ -129,8 +128,6 @@ modtagRepeatScreen:
 			goto interfaceScreen;
 		}
 	}
-
-
 
 
 historikScreen:
