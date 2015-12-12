@@ -9,4 +9,6 @@
 \contentsline {subsection}{\numberline {3.2}Workload (product backlog)}{7}{subsection.3.2}
 \contentsline {section}{\numberline {4}Konklusion}{8}{section.4}
 \contentsline {section}{\numberline {5}Perspektivering}{9}{section.5}
-\contentsline {section}{\numberline {6}Section}{10}{section.6}
+\contentsline {section}{\numberline {6}Litteraturliste}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}B\IeC {\o }ger}{10}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Hjemmesider}{10}{subsection.6.2}
