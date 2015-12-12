@@ -26,7 +26,7 @@ std::string ToneKonvertering::returnBitString()
 		std::cout << "fix mic";
 	}
 	optag.start(8000);
-	while (!optag.getNyBesked() && tid.asSeconds() < 5 )
+	while (!optag.getNyBesked() && tid.asSeconds() < 10 )
 	{
 		
 		if (optag.getBeskedBegyndt() && !clockReset)
@@ -40,13 +40,14 @@ std::string ToneKonvertering::returnBitString()
 		tid = clock.getElapsedTime();
 	}
 	optag.stop();
-	std::cout << tid.asSeconds() << std::endl;
+
 	if (!optag.getNyBesked())
 	{
 		return "Fejl: No message!";
 	}
 
 	vector<int> output = optag.getBesked();
+	
 
 	output.erase(output.begin());
 

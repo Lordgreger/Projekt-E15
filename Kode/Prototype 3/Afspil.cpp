@@ -11,7 +11,9 @@ Afspil::~Afspil()
 
 
 void Afspil::sendData(std::vector<int> input)
-{
+{	
+
+
 	//tonerTilAfspilning;
 	//addToner(input);
 	makeRaw0(input);

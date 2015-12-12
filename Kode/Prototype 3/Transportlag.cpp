@@ -29,6 +29,7 @@ std::string Transportlag::senderTransport(std::string enTekst)
 
 	for (size_t i = 1; i <= numberOfSequences; i++)				//Der laves headeren til hvert segment
 	{
+
 		senderBuffer[i] = intToString(i);						//sequence number indsættes
 		if (i<numberOfSequences)
 		{
@@ -52,6 +53,7 @@ std::string Transportlag::senderTransport(std::string enTekst)
 
 	for (size_t i = 0; i <= numberOfSequences; i++)							//Nu sender vi segmenterne og modtager ACK
 	{
+		std::cout << "Vi sender sekvens nummer: " << i + 1 << std::endl;
 		//---------------------------------------------
 
 		for (size_t k = 0; k < 5; k++)										//Vi sender højst et segment 5 gange
@@ -59,10 +61,12 @@ std::string Transportlag::senderTransport(std::string enTekst)
 			//std::cout << "sender " << senderBuffer[i] << std::endl;
 			sendSegment(senderBuffer[i]);
 
-			receiverBuffer[i] = waitForMessage();						
+			receiverBuffer[i] = waitForMessage();	
+
 			//std::cout << "modtog " << receiverBuffer[i] << std::endl;
 			if (receiverBuffer[i] == "Fejl: No message!")					//Hvis vi modtager en fejlmeddelelse (tom eller CRC fejl)
 			{
+				std::cout << "Vi fandt en fejl i ACK!!!" << std::endl;
 				if (k == 2 && i == 0)										//Hvis vi fejler vores probing 3 gange giver vi op
 				{
 					return "Fejl: No connection created!";
@@ -119,7 +123,9 @@ std::string Transportlag::receiverTransport()
 		{
 			for (size_t k = 0; k < 10; k++)														//Vi giver senderen 10 forsøg til at probe (altså 10 gange optagelsestiden)
 			{
+
 				receiverBuffer[0] = waitForMessage();											//Optag
+
 
 				if (receiverBuffer[0] != "Fejl: No message!")									//Hvis vi modtager en besked-
 				{
@@ -128,6 +134,10 @@ std::string Transportlag::receiverTransport()
 						numberOfSequences = binaryToDecimal(receiverBuffer[0].substr(11, 8));	//Hvis det er en probing, aflæser vi antal segmenter der sendes
 						break;
 					}
+				}
+				else 
+				{
+					std::cout << "Vi modtog ikke noget!" << std::endl;
 				}
 				if (k == 9)																		//vi modtog ikke noget 10 gange
 				{
@@ -142,20 +152,28 @@ std::string Transportlag::receiverTransport()
 			for (size_t k = 0; k < 3; k++)														//Hver gang vi modtager forsøger vi 3 gange, ellers er forbindelsen tabt
 			{
 				receiverBuffer[i] = waitForMessage();											//Modtag
+				
 				if (receiverBuffer[i] != "Fejl: No message!")									//Hvis vi modtager noget
 				{
+
 					if (receiverBuffer[i].substr(0,8) != senderBuffer[i].substr(0,8))			//Checker vi ACK og sekvens nummer
 					{
 						i--;																	//hvis de er forskellige sendes forrige ACK igen
 					}
 					break;
 				}
+				else
+				{
+					std::cout << "Vi modtog ikke noget!" << std::endl;
+				}
 				if (k == 2)																		//Efter 3 forsøg er forbindelsen tabt
 				{
 					return "Fejl: Connection lost!";
 				}
 			}
+			
 			sendSegment(senderBuffer[i]);														//Send ACK
+			
 		}
 		if (receiverBuffer[i][8] == '1')														//Check for slut flag
 		{
@@ -165,7 +183,9 @@ std::string Transportlag::receiverTransport()
 				{
 					break;
 				}
+				
 				sendSegment(senderBuffer[i]);
+				
 			}
 			break;
 		}

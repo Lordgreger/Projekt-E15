@@ -49,7 +49,7 @@ bool MyRecorder::onProcessSamples(const sf::Int16* samples, std::size_t sampleCo
 		return true;
 	}
 	
-	if (currentTone == 14)										//14 er slutbit(tone)
+	if (currentTone == 14 && beskedBegyndt)										//14 er slutbit(tone)
 	{
 		debounceBuffer2 = debounceBuffer1;
 		debounceBuffer1 = currentTone;

@@ -68,22 +68,30 @@ std::string DLL::applyRecieverDLL()
 
 	bitstreng = ToneKonv.returnBitString();
 
+	
+
 	if (bitstreng == "Fejl: No message!")
 	{
 		return "Fejl: No message!";
 	}
 
 	bitstreng = removeStuffing(bitstreng);
+	
+
 
 	std::string tempCRC = "";
 
 	tempCRC = tempCRC.append(bitstreng, bitstreng.size() - 8, 8);
 
 	bitstreng.erase(bitstreng.size() - 8, 8);
+	
+
 
 	if (CRC.runCRC(bitstreng) != tempCRC)
 	{
-		std::cout << bitstreng << " " << tempCRC << " " << "ERROR: CRC NOT TRUE" << std::endl;
+
+		std::cout << "Der var en fejl i CRC!!!! For helvedet Rene!!" << std::endl;
+
 		return "Fejl: No message!";
 	}
 
