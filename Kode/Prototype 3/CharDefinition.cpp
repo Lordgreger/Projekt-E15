@@ -11,15 +11,20 @@ CharDefinition::~CharDefinition()
 
 }
 
-void CharDefinition::applyCharDef(std::string input)
+std::string CharDefinition::applyCharDef(std::string input)
 {
 	input = charToBinary(input);
-	transP.senderTransport(input);
+	return  transP.senderTransport(input);
 }
 
 std::string CharDefinition::recieverCharDef()
 {
-	return binaryToChar(transP.receiverTransport());
+	std::string messageReceived = transP.receiverTransport();
+	if (messageReceived == "Fejl: No message!" || messageReceived == "Fejl: Connection lost!" )
+	{
+		return messageReceived;
+	}
+	return binaryToChar(messageReceived);
 }
 
 

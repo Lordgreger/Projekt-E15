@@ -14,11 +14,13 @@ std::string Transportlag::senderTransport(std::string enTekst)
 	receiverBuffer.resize(256);
 	senderBuffer.clear();
 	senderBuffer.resize(256);
-	numberOfSequences = enTekst.size() / 80;
+	//Initializer
+
+	numberOfSequences = enTekst.size() / 80;					//Find antal segmenter der skal sendes
 
 	if (enTekst.size() % 80 != 0)
 	{
-		numberOfSequences++;
+		numberOfSequences++;									//Én lægges til hvis der ikke sendes et antal bytes der går op i 10.
 	}
 	senderBuffer[0] = { "00000000" };							//Her laves probing headeren
 	senderBuffer[0] += "001";
@@ -45,28 +47,26 @@ std::string Transportlag::senderTransport(std::string enTekst)
 		}
 	}
 
-	//-----------------------------------------------
+	//-----------------------------------------------			
 
-	for (size_t i = 0; i <= numberOfSequences; i++)
+	for (size_t i = 0; i <= numberOfSequences; i++)							//Nu sender vi segmenterne og modtager ACK
 	{
-		
-
 		//---------------------------------------------
-		for (size_t k = 0; k < 5; k++)
+
+		for (size_t k = 0; k < 5; k++)										//Vi sender højst et segment 5 gange
 		{
 			//std::cout << "sender " << senderBuffer[i] << std::endl;
 			sendSegment(senderBuffer[i]);
 
-			receiverBuffer[i] = waitForMessage();							//Prøv igen
+			receiverBuffer[i] = waitForMessage();						
 			//std::cout << "modtog " << receiverBuffer[i] << std::endl;
-			if (receiverBuffer[i] == "Fejl: No message!")				//Hvis vi modtager en fejlmeddelelse (tom eller CRC fejl)
+			if (receiverBuffer[i] == "Fejl: No message!")					//Hvis vi modtager en fejlmeddelelse (tom eller CRC fejl)
 			{
-
 				if (k == 2 && i == 0)										//Hvis vi fejler vores probing 3 gange giver vi op
 				{
 					return "Fejl: No connection created!";
 				}
-				else if (k == 4)										//Hvis vi ikke modtager et ACK 5 gange giver vi op
+				else if (k == 4)											//Hvis vi ikke modtager et ACK 5 gange giver vi op
 				{
 					return "Fejl: Connection lost!";
 				}
@@ -77,31 +77,24 @@ std::string Transportlag::senderTransport(std::string enTekst)
 				break;
 			}
 		}
+
 		//---------------------------------------------
 
-		if (i == 0 && receiverBuffer[i] == "00000000000")
+		if (i == 0 && receiverBuffer[i] == "00000000000")					//Hvis Kontrol flag for accept er ikke sat-
 		{
-			return "Receiver does not accept message!";								//Hvis modtageren ikke accepter stopper vi
+			return "Receiver does not accept message!";						//Så accepterer modtageren ikke, og vi stopper
 		}
 
 		if (i != binaryToDecimal(receiverBuffer[i].substr(0, 8)))
 		{
-			//std::cout << "indeks er " << i << " vi tjekker imod " << binaryToDecimal(receiverBuffer[i].substr(0, 8)) << std::endl;
-			i = i--;									//Hvis ACK ikke passer overens sendes det sidste segment igen..
+			i = i--;														//Hvis ACK ikke passer overens sendes det sidste segment igen..
 		}
-
-
 	}
 
 	//-----------------------------------------------	
 
-
-
 	return "Message delivered!";
-
 }
-
-
 
 std::string Transportlag::receiverTransport()
 {
@@ -110,149 +103,81 @@ std::string Transportlag::receiverTransport()
 	senderBuffer.clear();
 	senderBuffer.resize(256);
 	int numberOfSequences = 256;
-	senderBuffer[0] = "00000000010";							// Probing ACK
-	for (size_t i = 1; i < 256; i++)				// Vi definerer senderbufferen
+	//Initialize
+
+	senderBuffer[0] = "00000000010";															// Probing ACK
+	for (size_t i = 1; i < 256; i++)															// Vi laver resten af ACK'erne
 	{
-		senderBuffer[i] = intToString(i);						// ACK nummer
-		senderBuffer[i] += "000";								// Control flag
+		senderBuffer[i] = intToString(i);														// ACK nummer
+		senderBuffer[i] += "000";																// Control flag
 	}
 
-	for (size_t i = 0; i <= numberOfSequences; i++)
+	for (size_t i = 0; i <= numberOfSequences; i++)												//Vi sidder og modtager beskeder, og sender ACK tilbage.
 	{
-		if (i == 0)
+		if (i == 0)																				//Special case: Probing svar
 		{
-			for (size_t k = 0; k < 10; k++)
+			for (size_t k = 0; k < 10; k++)														//Vi giver senderen 10 forsøg til at probe (altså 10 gange optagelsestiden)
 			{
-				receiverBuffer[0] = waitForMessage();
+				receiverBuffer[0] = waitForMessage();											//Optag
 
-				if (receiverBuffer[0] != "Fejl: No message!")
+				if (receiverBuffer[0] != "Fejl: No message!")									//Hvis vi modtager en besked-
 				{
-
-					if ("001" == receiverBuffer[0].substr(8, 3))
+					if ("001" == receiverBuffer[0].substr(8, 3))								//Checker vi om det er en probing
 					{
-						numberOfSequences = binaryToDecimal(receiverBuffer[0].substr(11, 8));
+						numberOfSequences = binaryToDecimal(receiverBuffer[0].substr(11, 8));	//Hvis det er en probing, aflæser vi antal segmenter der sendes
 						break;
 					}
 				}
-				if (k == 9)
+				if (k == 9)																		//vi modtog ikke noget 10 gange
 				{
 					return "Fejl: No message!";
 				}
 			}
-		sendSegment(senderBuffer[0]);
-
+		sendSegment(senderBuffer[0]);															//Send ACK for probing
 		}
-		else
+
+		else																					//hvis forbindelsen er oprettet
 		{
-			for (size_t k = 0; k < 3; k++)
+			for (size_t k = 0; k < 3; k++)														//Hver gang vi modtager forsøger vi 3 gange, ellers er forbindelsen tabt
 			{
-				receiverBuffer[i] = waitForMessage();
-				if (receiverBuffer[i] != "Fejl: No message!")
+				receiverBuffer[i] = waitForMessage();											//Modtag
+				if (receiverBuffer[i] != "Fejl: No message!")									//Hvis vi modtager noget
 				{
-					if (receiverBuffer[i].substr(0,8) != senderBuffer[i].substr(0,8))
+					if (receiverBuffer[i].substr(0,8) != senderBuffer[i].substr(0,8))			//Checker vi ACK og sekvens nummer
 					{
-						i--;
+						i--;																	//hvis de er forskellige sendes forrige ACK igen
 					}
 					break;
 				}
-				if (k == 2)
+				if (k == 2)																		//Efter 3 forsøg er forbindelsen tabt
 				{
-					
 					return "Fejl: Connection lost!";
 				}
 			}
-			sendSegment(senderBuffer[i]);
+			sendSegment(senderBuffer[i]);														//Send ACK
 		}
-		if (receiverBuffer[i][8] == '1')
+		if (receiverBuffer[i][8] == '1')														//Check for slut flag
 		{
+			for (size_t k = 0; k < 3; k++)														//3 forsøg til at modtage
+			{
+				if (waitForMessage() == "Fejl: No message!")
+				{
+					break;
+				}
+				sendSegment(senderBuffer[i]);
+			}
 			break;
 		}
 	}
 
-
 	std::string message;	
 	//std::cout << "sequence number " << numberOfSequences << std::endl;
-
-	for (size_t i = 1; i <= numberOfSequences; i++)
+	for (size_t i = 1; i <= numberOfSequences; i++)								//Omdan buffer til besked og retuner den til CharDef
 	{
-		receiverBuffer[i].erase(0, 11);
+		receiverBuffer[i].erase(0, 11);											//Fjern header
 		message += receiverBuffer[i];
-	
 	}
-
 	return message;
-
-
-
-
-
-
-/*
-
-	for (size_t i = 0; i < 10; i++)
-	{
-		receiverBuffer[0] = waitForMessage();
-
-		if (receiverBuffer[0] != "Fejl: No message!")
-		{
-			
-			if ("001" == receiverBuffer[0].substr(8, 3))
-			{
-				numberOfSequences = 5;
-				binaryToDecimal(receiverBuffer[0].substr(1, 8));
-				break;
-			}
-		}
-		if (i == 9)
-		{
-			return "Fejl: No message!";
-		}
-	}*/
-
-
-
-	
-/*
-
-	for (size_t i = 0; i < numberOfSequences; i++)
-	{
-		std::cout << "sender " << senderBuffer[i] << std::endl;
-		sendSegment(senderBuffer[i]);
-
-		for (size_t k = 0; k < 10; k++)
-		{		
-			receiverBuffer[i] = waitForMessage();
-			std::cout << "modtog " << receiverBuffer[i] << std::endl;
-
-			if (receiverBuffer[i] == "Fejl: No message!" && k==9)
-			{
-				return "Fejl: Connection lost!";
-			}
-			else if(receiverBuffer[i] != "Fejl: No message!")
-			{
-				break;
-			}
-		}
-		
-		std::cout << receiverBuffer[i] << std::endl;
-		std::cout << "diller loop " << binaryToDecimal(receiverBuffer[i].substr(0, 8)) << "tjekker imod " << i << std::endl;
-		if (binaryToDecimal(receiverBuffer[i].substr(0, 8)) != i)
-		{
-			
-
-			i--;
-		}
-			std::cout << i << std::endl;
-	}
-
-	std::string message;
-	for (size_t i = 1; i < numberOfSequences; i++)
-	{
-		receiverBuffer[i].erase(0, 11);
-		message += receiverBuffer[i];
-	}
-
-	return message;*/
 }
 
 std::string Transportlag::intToString(int talTilKonvertering)
@@ -274,7 +199,6 @@ std::string Transportlag::intToString(int talTilKonvertering)
 
 int Transportlag::binaryToDecimal(std::string bins)
 {
-
 	int decimal = 0;
 
 	for (int i = 0; i <= 7; i++)
@@ -284,8 +208,6 @@ int Transportlag::binaryToDecimal(std::string bins)
 			decimal += pow(2 ,i);
 		}
 	}
-
-
 	return decimal;
 }
 
@@ -297,7 +219,6 @@ void Transportlag::sendSegment(std::string etSegment)
 std::string Transportlag::waitForMessage()
 {
 	return dll.applyRecieverDLL();
-
 }
 
 

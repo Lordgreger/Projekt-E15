@@ -10,7 +10,7 @@ public:
 	CharDefinition();
 	~CharDefinition();
 
-	void applyCharDef(std::string input);
+	std::string applyCharDef(std::string input);
 	std::string recieverCharDef();
 
 protected:

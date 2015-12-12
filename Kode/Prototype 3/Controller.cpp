@@ -9,13 +9,15 @@ Controller::~Controller()
 {
 }
 
-void Controller::sendBesked(std::string besked, std::string uName)
+std::string Controller::sendBesked(std::string besked, std::string uName)
 {
+	std::string systemMessage;
 	std::string tempBesked = uName + ": " + besked;
-	CharDeff.applyCharDef(tempBesked);
+	systemMessage = CharDeff.applyCharDef(tempBesked);
 	Files historik(uName);
 	historik.AddNewLine(tempBesked);
 	historik.~Files();
+	return systemMessage;
 }
 
 std::string Controller::modtagBesked(std::string uName)

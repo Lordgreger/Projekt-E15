@@ -26,7 +26,7 @@ std::string ToneKonvertering::returnBitString()
 		std::cout << "fix mic";
 	}
 	optag.start(8000);
-	while (!optag.getNyBesked() && tid.asSeconds() < 15 )
+	while (!optag.getNyBesked() && tid.asSeconds() < 5 )
 	{
 		
 		if (optag.getBeskedBegyndt() && !clockReset)
