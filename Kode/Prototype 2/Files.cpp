@@ -29,7 +29,7 @@ void Files::UpdateVector()									//This is meant for updating the dataholder f
 		HistoryVector.push_back(tempString);				//Add line to vector
 	}
 
-	FlipVector(HistoryVector);								//Flip vector to read latest line as index 0
+	//FlipVector(HistoryVector);								//Flip vector to read latest line as index 0
 }
 
 void Files::ClearText()										//This is meant for resetting the history of the document
@@ -41,19 +41,34 @@ void Files::ClearText()										//This is meant for resetting the history of th
 
 void Files::PrintVector()									//Prints entire HistoryVector 
 {
-	int n = 0;
-	int m = HistoryVector.size();							//Gets the length of HistoryVector (Note, if the size of the vector is 5, the index goes from 0 > 4 etc.)
-	
-	while (n < m)											//Rather simple while loop
+	if (!HistoryVector.empty())
 	{
-		std::cout << HistoryVector[n] << std::endl;
-		n++;
+		int n = 0;
+		int m = HistoryVector.size();							//Gets the length of HistoryVector (Note, if the size of the vector is 5, the index goes from 0 > 4 etc.)
+
+		while (n < m)											//Rather simple while loop
+		{
+			std::cout << HistoryVector[n] << std::endl;
+			n++;
+		}
+	}
+	else
+	{
+		std::cout << "Historikken er tom" << std::endl;
 	}
 }
 
 void Files::PrintLatest()									//Prints latest line
 {
-	std::cout << HistoryVector[0] << std::endl;				//Achieved simply due to having a flipped HistoryVector
+
+	if (!HistoryVector.empty())
+	{
+		std::cout << HistoryVector.back() << std::endl;			//Looks at last vector info and couts it
+	}
+	else
+	{
+		std::cout << "Historikken er tom" << std::endl;
+	}
 }
 
 void Files::PrintLines(int startN, int endM)				//Prints lines n to m
