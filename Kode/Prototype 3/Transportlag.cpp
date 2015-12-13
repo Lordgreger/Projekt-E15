@@ -135,10 +135,6 @@ std::string Transportlag::receiverTransport()
 						break;
 					}
 				}
-				else 
-				{
-					std::cout << "Vi modtog ikke noget!" << std::endl;
-				}
 				if (k == 9)																		//vi modtog ikke noget 10 gange
 				{
 					return "Fejl: No message!";
@@ -161,10 +157,6 @@ std::string Transportlag::receiverTransport()
 						i--;																	//hvis de er forskellige sendes forrige ACK igen
 					}
 					break;
-				}
-				else
-				{
-					std::cout << "Vi modtog ikke noget!" << std::endl;
 				}
 				if (k == 2)																		//Efter 3 forsøg er forbindelsen tabt
 				{
@@ -192,7 +184,7 @@ std::string Transportlag::receiverTransport()
 	}
 
 	std::string message;	
-	//std::cout << "sequence number " << numberOfSequences << std::endl;
+	
 	for (size_t i = 1; i <= numberOfSequences; i++)								//Omdan buffer til besked og retuner den til CharDef
 	{
 		receiverBuffer[i].erase(0, 11);											//Fjern header

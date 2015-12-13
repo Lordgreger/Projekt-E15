@@ -22,7 +22,7 @@ int Goertzel::findTone(const sf::Int16* samples)
 	}
 
 	int max[2] = {};
-	int y = 0;
+	int y = 0;						//Hva så Daniel, gør det ikke at vi optager lort på goertzel hele tiden??
 
 	for (int i = 0; i < 4; i++)
 	{
@@ -32,7 +32,7 @@ int Goertzel::findTone(const sf::Int16* samples)
 			max[0] = i;
 		}
 	}
-
+	
 	y = 400000;                     //LORT
 
 	for (int i = 0; i < 4; i++)
@@ -44,22 +44,13 @@ int Goertzel::findTone(const sf::Int16* samples)
 		}
 	}
 		
-	/*for (size_t i = 0; i < 4; i++)
-	{
-		std::cout << resultArrayB[i] << std::endl;
-	}*/
-
-	if (y > 400000 )                               //LORT
+	if (y > 400000 )               //LORT
 	{	
-		
-	//	std::cout << max[1] + (max[0]) * 4 << "      " << y << std::endl;
 		return max[1] + (max[0]) * 4;
-		
 	}
 	
 	return 16;
 }
-
 
 int Goertzel::findTones(const sf::Int16* samples)
 {
@@ -117,7 +108,6 @@ int Goertzel::findTones(const sf::Int16* samples)
 
 }
 
-
 int Goertzel::detectFreqs(const sf::Int16* samples, int K)
 {
 	double f = K / (double)N;
@@ -135,14 +125,10 @@ int Goertzel::detectFreqs(const sf::Int16* samples, int K)
 	}
 
 	int power = prevS2*prevS2 + prevS1*prevS1 - 2 * cos(omega)*prevS1*prevS2;
-	power = pow(power, 2) / 20000000000;
+	power = pow(power, 2) / 20000000000;						//Den store værdi er der kun, for at vi kan se nemmere hvad der sker
 	
 	return power;
 }
-
-
-
-
 
 Goertzel::~Goertzel()
 {

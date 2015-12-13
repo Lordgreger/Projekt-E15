@@ -60,6 +60,5 @@ int Afspil::afspilToner(int længdeAfElementer)
 
 	sf::sleep(sf::seconds((længdeAfElementer * SAMPLES)/ SAMPLE_RATE + 2));
 	
-	
 	return 0;
 }

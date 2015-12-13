@@ -20,7 +20,6 @@ protected:
 	int detectFreqs(const sf::Int16* samples, int K);
 	const double pi = 3.1415926;
 	const int N = 300;
-	int x = 0;
 	const int kTone1[4] = { 26, 29 ,32, 35 };
 	const int kTone2[4] = { 45, 50, 55, 61 };
 
