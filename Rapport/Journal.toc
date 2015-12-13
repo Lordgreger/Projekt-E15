@@ -7,8 +7,10 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Metodebeskrivelse}{6}{subsubsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.3}Afgr\IeC {\ae }nsning}{6}{subsubsection.3.1.3}
 \contentsline {subsection}{\numberline {3.2}Workload (product backlog)}{7}{subsection.3.2}
-\contentsline {section}{\numberline {4}Konklusion}{8}{section.4}
-\contentsline {section}{\numberline {5}Perspektivering}{9}{section.5}
-\contentsline {section}{\numberline {6}Litteraturliste}{10}{section.6}
-\contentsline {subsection}{\numberline {6.1}B\IeC {\o }ger}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Hjemmesider}{10}{subsection.6.2}
+\contentsline {section}{\numberline {4}Det Fysiske Lag}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Fysisk Lag Ind}{8}{subsection.4.1}
+\contentsline {section}{\numberline {5}Konklusion}{9}{section.5}
+\contentsline {section}{\numberline {6}Perspektivering}{10}{section.6}
+\contentsline {section}{\numberline {7}Litteraturliste}{11}{section.7}
+\contentsline {subsection}{\numberline {7.1}B\IeC {\o }ger}{11}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Hjemmesider}{11}{subsection.7.2}
