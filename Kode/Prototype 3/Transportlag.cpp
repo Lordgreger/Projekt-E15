@@ -145,7 +145,7 @@ std::string Transportlag::receiverTransport()
 
 		else																					//hvis forbindelsen er oprettet
 		{
-			for (size_t k = 0; k < 3; k++)														//Hver gang vi modtager forsøger vi 3 gange, ellers er forbindelsen tabt
+			for (size_t k = 0; k < 5; k++)														//Hver gang vi modtager forsøger vi 3 gange, ellers er forbindelsen tabt
 			{
 				receiverBuffer[i] = waitForMessage();											//Modtag
 				
@@ -158,7 +158,7 @@ std::string Transportlag::receiverTransport()
 					}
 					break;
 				}
-				if (k == 2)																		//Efter 3 forsøg er forbindelsen tabt
+				if (k == 4)																		//Efter 3 forsøg er forbindelsen tabt
 				{
 					return "Fejl: Connection lost!";
 				}
