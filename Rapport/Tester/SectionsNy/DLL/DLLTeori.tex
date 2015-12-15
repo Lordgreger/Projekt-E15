@@ -1,0 +1,26 @@
+\subsection{Teori}
+\underline{\textbf{CRC}}
+\newline
+CRC står for Cyklisk Redundant Check, og bruges til fejl-detektering. Denne metode bruges generelt både til LAN og WAN netværk.
+\newline
+\textbf{Modulo-2 Binary Division}
+\newline
+Modulo er resten af en division mellem to tal, og er oftest udtrykt som "\%".
+\newline
+I division fås udtrykket:
+$$s = n \times d + r$$
+\newline
+Hvor s er dividenden, n er kvotienten, d er divisoren og r er resten.
+\newline
+I modulo defineres nye oprationer, som ofte ligner Boolske logiske operationer, heriblandt XOR, som bruges til addition, og AND, som bruges til mulitplikation.
+Bitvist er er modulo-2 det samme som XOR, og her noteres modulo-2 additions operationen med en cirkel med et plus, f.eks.: 
+$$1 \oplus 0 = 1$$
+
+\newline
+\hfill \break
+\underline{\textbf{Stuffing}}
+\newline
+Bitstuffing tilføjer ubrugte bits for at gøre datastrukturer nemmere at manipulere.
+\newline
+Stuffing tilføjes bitstrengen efter resten er fundet, ved hjælp af modulus. Hvis resten er 0 tilføjes "100", hvis resten er 1 tilføjes "10" og hvis resten er 2 tilføjes "1"
+giver mening i forhold til dataformat.

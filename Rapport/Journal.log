@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  15 DEC 2015 13:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  15 DEC 2015 21:01
 entering extended mode
 **Journal.tex
 (Journal.tex
@@ -42,6 +42,18 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count87
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
@@ -2110,10 +2122,6 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 2--53
-
- []
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2133,7 +2141,52 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
+LaTeX Font Info:    Try loading font information for T1+txtt on input line 4.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\txfonts\t1txtt.fd"
+File: t1txtt.fd 2000/12/15 v3.1
 )
+Package microtype Info: Loading generic settings for font family
+(microtype)             `txtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+<pictures/SDsend.png, id=187, 722.09775pt x 482.40225pt>
+File: pictures/SDsend.png Graphic file (type png)
+
+<use pictures/SDsend.png>
+Package pdftex.def Info: pictures/SDsend.png used on input line 9.
+(pdftex.def)             Requested size: 426.78323pt x 285.11539pt.
+
+<pictures/SDmodtagBesked.png, id=189, 938.50626pt x 625.33624pt>
+File: pictures/SDmodtagBesked.png Graphic file (type png)
+
+<use pictures/SDmodtagBesked.png>
+Package pdftex.def Info: pictures/SDmodtagBesked.png used on input line 19.
+(pdftex.def)             Requested size: 426.79189pt x 284.37576pt.
+
+<pictures/SDcreateUser.png, id=191, 559.49025pt x 97.5645pt>
+File: pictures/SDcreateUser.png Graphic file (type png)
+
+<use pictures/SDcreateUser.png>
+Package pdftex.def Info: pictures/SDcreateUser.png used on input line 31.
+(pdftex.def)             Requested size: 426.8049pt x 74.42667pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 61.
+[11 <./pictures/SDsend.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2148,7 +2201,8 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 67.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 67.
-[11] (sections/Konklusion.tex
+[12 <./pictures/SDmodtagBesked.png> <./pictures/SDcreateUser.png>]
+(sections/Konklusion.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2168,7 +2222,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 69.
-[12] (sections/Perspektivering.tex
+[13] (sections/Perspektivering.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2188,7 +2242,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 71.
-[13] (sections/Litteraturliste.tex
+[14] (sections/Litteraturliste.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2217,7 +2271,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 74.
-[14]
+[15]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining danish shorthand "~
@@ -2236,24 +2290,26 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
 ### semi simple group (level 1) entered at line 2 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 32881 strings out of 493673
- 637148 string characters out of 3143960
- 785217 words of memory out of 3000000
- 35437 multiletter control sequences out of 15000+200000
- 62782 words of font info for 157 fonts, out of 3000000 for 9000
+ 33027 strings out of 493673
+ 639132 string characters out of 3143960
+ 785772 words of memory out of 3000000
+ 35516 multiletter control sequences out of 15000+200000
+ 66873 words of font info for 193 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,12n,97p,10363b,856s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,97p,10363b,857s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Program Fil
-es/MiKTeX 2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Program Files/MiKTeX 2.9/
-fonts/type1/public/txfonts/rtxr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on Journal.pdf (14 pages, 265129 bytes).
+:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/txfonts/rtxr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfo
+nts/t1xtt.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/txsy.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files
+/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
+/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Journal.pdf (15 pages, 328654 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 42 named destinations out of 1000 (max. 500000)
- 40638 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 276 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
+ 41165 words of extra memory for PDF output out of 42996 (max. 10000000)
 
