@@ -1,80 +1,10 @@
 \section{Indledning}
-\subsection{Projektbeskrivelse}
-I dette projekt er to højtalere og to mikrofoner blevet stillet til rådighed. Formålet med dette projekt er, at kunne sende data vha. DTMF-toner.
-\newline
-Det valgte projekt er et chatprogram, der udvikles i C++, og skal have de primære funktioner:
-\begin{itemize}
-	\item Overførsel af tekst.
-	\item Log-in funktioner.
-	\item Historik af chat-samtale.
-\end{itemize}
+\input{SectionsNy/Indledning/Projektbeskrivelse}
 
-Desuden er disse sekundære funktioner blevet overvejet:
-\begin{itemize}
-	\item Filoverførsel
-	\item Gruppe chat
-	\item Spil
-	\item Redigering af tidligere beskeder
-	\item Video streamings funktioner
-	\item Humørikoner
-\end{itemize}
+\input{SectionsNy/Indledning/Krav}
 
-Herudover er der desuden blevet overvejet at bruge en tredje computer, som kan bruges som en server.
-Her vil mindst to computere altså være i stand til at kommunikere med hinanden vha. DTMF-toner.
+\input{SectionsNy/Indledning/Metodebeskrivelse}
 
-\subsubsection{Krav til produktet}
-Følgende krav blev stillet til projektet:
-\begin{itemize}
-	\item Bærbare computere skal kommunikere med hinanden, eller evt. et embedded system, ved	udveksling af lyd
-	\item Der skal anvendes DTMF toner, og der skal designes en kommunikationsprotokol
-	\item Der skal udvikles en distribueret applikation i C++
-	\item Der skal anvendes en lagdelt softwarearkitektur
-	\item Arkitekturen kunne være client/server med f.eks. tykke klienter
-\end{itemize}
-For at fuldføre dette projekt skal der anvendes to computere som skal være i stand til at kommunikere med hinanden ved hjælp af lyd i form af DTMF-toner. Derudover skal dette programmers i C++, her bruges klasser.
+\input{SectionsNy/Indledning/Afgraensning}
 
-\subsubsection{Metodebeskrivelse}
-Vi har i dette projekt valgt at benytte SCRUM, da alle gruppe medlemmer således er i stand til at arbejde med den metode der passer dem bedst. 
-Vi har valgt at bruge brainstorm, som vores primære form for idégenererings-teknik.
-Desuden prøver gruppen så vidt muligt at beregne alle de ting, der kan beregnes på forhånd.
-
-\subsubsection{Afgrænsning}
-Her ses de emner, som gruppen har overvejet at arbejde med. De primære funktioner er de funktioner som skal løses først, mens de sekundære løses efter tidsbegrænsning.
-\newline
-%Følgende punkter kan godt slettes hvis nødvendigt:
-Primære funktioner:
-\begin{itemize}
-	\item Overførsel af tekst
-		\subitem Protokol
-		\subitem Karakter definition
-		\subitem Størrelse
-	\item Historik
-		\subitem Tidspunkt
-		\subitem Størrelse
-	\item Log-in
-\end{itemize}
-
-Sekundære funktioner:
-\begin{itemize}
-	\item Fil-overførsel
-		\subitem Protokol
-		\subitem Queue
-	\item Gruppe chat
-		\subitem Protokol
-	\item Spil database
-		\subitem Protokol
-		\subitem Funktion
-	\item Rediger tidligere beskeder
-		\subitem Protokol
-		\subitem Funktion
-	\item Stream funktion
-		\subitem Protokol
-		\subitem Funktion
-	\item Humørikoner
-		\subitem Char def.
-		\subitem Database
-	\item GUI
-		\subitem Agil
-	\item Sky "server"
-		\subitem Funktion
-\end{itemize}
+\input{SectionsNy/Indledning/Workload}

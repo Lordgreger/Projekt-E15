@@ -7,13 +7,18 @@
 \BOOKMARK [3][-]{subsubsection.3.1.3}{Afgr\346nsning}{subsection.3.1}% 7
 \BOOKMARK [2][-]{subsection.3.2}{Workload \(product backlog\)}{section.3}% 8
 \BOOKMARK [1][-]{section.4}{Det Fysiske Lag}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Fysisk Lag Ind}{section.4}% 10
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Teori}{subsection.4.1}% 11
-\BOOKMARK [1][-]{section.5}{Data Link Laget}{}% 12
-\BOOKMARK [2][-]{subsection.5.1}{Teori}{section.5}% 13
-\BOOKMARK [1][-]{section.6}{Kontrolfunktioner}{}% 14
-\BOOKMARK [1][-]{section.7}{Konklusion}{}% 15
-\BOOKMARK [1][-]{section.8}{Perspektivering}{}% 16
-\BOOKMARK [1][-]{section.9}{Litteraturliste}{}% 17
-\BOOKMARK [2][-]{subsection.9.1}{B\370ger}{section.9}% 18
-\BOOKMARK [2][-]{subsection.9.2}{Hjemmesider}{section.9}% 19
+\BOOKMARK [2][-]{subsection.4.1}{Teori}{section.4}% 10
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Nyquist raten}{subsection.4.1}% 11
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Goertzel}{subsection.4.1}% 12
+\BOOKMARK [3][-]{subsubsection.4.1.3}{DTMF}{subsection.4.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.1.4}{C++ og SFML}{subsection.4.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.1.5}{Optag}{subsection.4.1}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Implementering}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Data Link Laget}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{Teori}{section.5}% 18
+\BOOKMARK [1][-]{section.6}{Kontrolfunktioner}{}% 19
+\BOOKMARK [1][-]{section.7}{Konklusion}{}% 20
+\BOOKMARK [1][-]{section.8}{Perspektivering}{}% 21
+\BOOKMARK [1][-]{section.9}{Litteraturliste}{}% 22
+\BOOKMARK [2][-]{subsection.9.1}{B\370ger}{section.9}% 23
+\BOOKMARK [2][-]{subsection.9.2}{Hjemmesider}{section.9}% 24
