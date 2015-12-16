@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  15 DEC 2015 21:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  16 DEC 2015 01:11
 entering extended mode
 **Journal.tex
 (Journal.tex
@@ -2038,22 +2038,22 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
+Underfull \hbox (badness 10000) in paragraph at lines 2--11
+
+ []
+
 <pictures/Open.png, id=153, 770.88pt x 446.66875pt>
 File: pictures/Open.png Graphic file (type png)
  <use pictures/Open.png>
-Package pdftex.def Info: pictures/Open.png used on input line 20.
+Package pdftex.def Info: pictures/Open.png used on input line 21.
 (pdftex.def)             Requested size: 284.52715pt x 164.86272pt.
 
 <pictures/Stream.png, id=155, 635.37375pt x 587.19376pt>
 File: pictures/Stream.png Graphic file (type png)
 
 <use pictures/Stream.png>
-Package pdftex.def Info: pictures/Stream.png used on input line 35.
+Package pdftex.def Info: pictures/Stream.png used on input line 36.
 (pdftex.def)             Requested size: 284.53885pt x 262.96245pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 40--47
-
- []
 
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2062,37 +2062,32 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 45.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 47.
+(babel)             in language  on input line 45.
 [8 <./pictures/Open.png>]
 <pictures/Close.png, id=165, 745.78625pt x 446.66875pt>
 File: pictures/Close.png Graphic file (type png)
 
 <use pictures/Close.png>
-Package pdftex.def Info: pictures/Close.png used on input line 50.
+Package pdftex.def Info: pictures/Close.png used on input line 48.
 (pdftex.def)             Requested size: 284.52832pt x 170.41063pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 55--48
+Underfull \hbox (badness 10000) in paragraph at lines 53--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--48
+Underfull \hbox (badness 10000) in paragraph at lines 53--48
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--48
+Underfull \hbox (badness 10000) in paragraph at lines 53--48
 
  []
 
@@ -2151,27 +2146,31 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-<pictures/SDsend.png, id=187, 722.09775pt x 482.40225pt>
+<pictures/SDsend.png, id=185, 722.09775pt x 482.40225pt>
 File: pictures/SDsend.png Graphic file (type png)
 
 <use pictures/SDsend.png>
 Package pdftex.def Info: pictures/SDsend.png used on input line 9.
 (pdftex.def)             Requested size: 426.78323pt x 285.11539pt.
 
-<pictures/SDmodtagBesked.png, id=189, 938.50626pt x 625.33624pt>
+<pictures/SDmodtagBesked.png, id=187, 938.50626pt x 625.33624pt>
 File: pictures/SDmodtagBesked.png Graphic file (type png)
 
 <use pictures/SDmodtagBesked.png>
 Package pdftex.def Info: pictures/SDmodtagBesked.png used on input line 19.
 (pdftex.def)             Requested size: 426.79189pt x 284.37576pt.
 
-<pictures/SDcreateUser.png, id=191, 559.49025pt x 97.5645pt>
+<pictures/SDcreateUser.png, id=189, 559.49025pt x 97.5645pt>
 File: pictures/SDcreateUser.png Graphic file (type png)
 
 <use pictures/SDcreateUser.png>
 Package pdftex.def Info: pictures/SDcreateUser.png used on input line 31.
 (pdftex.def)             Requested size: 426.8049pt x 74.42667pt.
-)
+
+Underfull \hbox (badness 10000) in paragraph at lines 2--36
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2179,13 +2178,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 36.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 61.
+(babel)             in language  on input line 36.
 [11 <./pictures/SDsend.png>]
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2194,15 +2193,57 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 39.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 67.
+(babel)             in language  on input line 39.
 [12 <./pictures/SDmodtagBesked.png> <./pictures/SDcreateUser.png>]
-(sections/Konklusion.tex
+Overfull \hbox (24.02187pt too wide) in paragraph at lines 39--45
+\T1/txr/m/n/10.95 (-20) Klassen har og-så me-to-den \T1/txtt/m/n/10.95 testLogi
+n(uName, pWord)\T1/txr/m/n/10.95 (-20) , som bru-ger me-to-den \T1/txtt/m/n/10.
+95 validateLogin(uName,
+ []
+
+<pictures/UIflow.png, id=208, 1051.5285pt x 1309.2915pt>
+File: pictures/UIflow.png Graphic file (type png)
+
+<use pictures/UIflow.png>
+Package pdftex.def Info: pictures/UIflow.png used on input line 68.
+(pdftex.def)             Requested size: 426.79733pt x 531.4189pt.
+)
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 61.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 61.
+[13]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 67.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 67.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 67.
+[14] (sections/Konklusion.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2222,7 +2263,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 69.
-[13] (sections/Perspektivering.tex
+[15] (sections/Perspektivering.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2242,7 +2283,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 71.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 71.
-[14] (sections/Litteraturliste.tex
+[16] (sections/Litteraturliste.tex
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining danish shorthand "~
@@ -2271,7 +2312,22 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 74.
-[15]
+[17]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 13.59999pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 74.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 74.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 74.
+[18 <./pictures/UIflow.png>]
 Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 74.
 Package babel Info: Redefining danish shorthand "~
@@ -2290,11 +2346,11 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
 ### semi simple group (level 1) entered at line 2 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33027 strings out of 493673
- 639132 string characters out of 3143960
- 785772 words of memory out of 3000000
- 35516 multiletter control sequences out of 15000+200000
- 66873 words of font info for 193 fonts, out of 3000000 for 9000
+ 33053 strings out of 493673
+ 639375 string characters out of 3143960
+ 786771 words of memory out of 3000000
+ 35518 multiletter control sequences out of 15000+200000
+ 67508 words of font info for 207 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  57i,12n,97p,10363b,857s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
@@ -2307,9 +2363,9 @@ nts/t1xtt.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/txfonts/txsy.pfb>
 /MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
 /utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Journal.pdf (15 pages, 328654 bytes).
+Output written on Journal.pdf (18 pages, 417685 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 47 named destinations out of 1000 (max. 500000)
- 41165 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 294 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 41170 words of extra memory for PDF output out of 42996 (max. 10000000)
 

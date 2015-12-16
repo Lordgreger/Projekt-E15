@@ -35,3 +35,38 @@ Denne går igennem de samme klasser som \texttt{sendBesked}, dog i stedet for at
 \hfill \break
 
 Der er også metoder der kan vise historikken. De bruger alle \texttt{Files} klassen og kan enten vise hele historikken, sidste besked eller en der kan definere hvor mange linjer der skal hentes og vises.
+
+\hfill \break
+\underline{\textbf{Login klassen}}
+\newline
+Klassen \texttt{Login} bruges til at oprette og teste brugernavn og password. Metoden \texttt{addUser(uName, Pword)} opretter nye brugere og gemmer brugernavn og password i et txt dokument.
+\newline
+Klassen har også metoden \texttt{testLogin(uName, pWord)}, som bruger metoden \texttt{validateLogin(uName, pWord)}. Den modtager et brugernavn og login, som bliver lavet om til en string. Denne string bliver efterfølgende sammenlignet med alle de brugernavne og passwords der er gemt i txt filen. Hvis der ikke findes et match bliver der returneret true og brugeren logges på.
+
+\hfill \break
+\underline{\textbf{Files klassen}}
+\newline
+\texttt{Files} klassen bruges til at gemme historik, når der bliver skrevet til hinanden med chat programmet. Files virker ved at når der oprettes et objekt at klassen, med en parameter, som er brugernavnet, bliver der oprettet et txt dokument med brugerens navn, som historikken kan gemmes i.
+\newline
+Funktionen \texttt{addNewLine(besked)} tilføjer en besked til tekstdokumentet. \texttt{updateVector()} bruges til at lave en vektor af linjerne fra historikken, som efterfølgende evt. kan printes ud på en skærm så brugeren kan se indholdet. Der er en metode \texttt{clearText()}, der kan slette alt fra historikken. Der er også metoden \texttt{printVector()}, der kan printe hver linje ud, som er i vektoren skabt med \texttt{updateVector()}. \texttt{printLatest()} printer den sidste besked ud og \texttt{printLines(startN, endM)} kan printe de valgte linjer ud fra linje n til m. Til sidst er der en metoden flipVector(), den bruges til vende vectoren, så fx den sidste modtagne besked kommer til at ligge øverst i vektoren, altså på plads 0.
+
+\hfill \break
+\underline{\textbf{CharDefinition klassen}}
+\newline
+\texttt{CharDefinition} klassens opgave er at omdanne forskellige karakterer om til binærer tal og tilbage igen. Hvis der oprettes et objekt af klassen, bliver der skabt en string af alle de tal, karakterer og andre tegn der tænkes at skulle kunne sendes. Den string kan bruges i metoderne. Der er en metode som hedder \texttt{applyCharDef(input)}, der bruger en anden metode \texttt{charToBinary}, som kan omdanne karakterer i en besked til binær, inden den sendes videre til Tranportlaget.
+\newline
+\texttt{charToBinary(input)} metoden tager inputtet som er en string af karakterer og laver det om til en binær string. Det gør den ved at kigge på de karakterer, der skal sendes og sammenligne dem med de definerede karakterer og tegn. Hvis der findes et match, bruges nummeret på placeringen af karakteren i den definerede string, som den binære værdi. Den binære værdi bliver 8 bits lang. Fx karakteren b, som har placeringen 12, får binær værdien 00001100.
+\newline
+\texttt{receiverCharDef()} er metoden der bruges når der returneres beskeder fra transportlaget og laver beskeden om fra binær til karakterer. Hvis beskeden der modtages er en fejlbesked sende den videre og vises på skærmen. Ellers bruges metoden \texttt{binaryToChar(messageReceived)} der omdanner de otte bits om til et decimaltal, som igen kan bruges til at finde placeringen af karakteren, der er modtaget og derefter sætte det på en string. Det gøres indtil hele beskeden er omdannet.
+
+\hfill \break
+\underline{\textbf{UI source}}
+\newline
+Til chat programmet er der valgt at lave et simpelt user interface. Det blev lavet ved at bruge konsolvinduet i Visual Studio. Et flowdiagram af systemet er vist på figur \ref{fig:uif}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=25cm,keepaspectratio]{pictures/UIflow.png}
+	\caption{\texttt{UI flowdiagram}}
+	\label{fig:uif}
+\end{figure}
+Programmet er bygget op ved at der gives nogle valgmuligheder. På første skærm kan der vælges mellem login eller opret bruger. Der vælges ved at indtaste et tal, her 1 eller 2. Tallet sammenlignes med de muligheder der er og programmet går til næste skærm. Når der oprettes ny bruger, indtastes brugernavn og password som efterfølgende bruges i \texttt{Controller} klassen i metoden \texttt{createUser(uName, pWord)}. Der vil efterfølgende gås videre til loginskærmen, hvor brugernavn og password indtastes igen og bruges i metoden \texttt{testLogin(uName, pWord)}. Hvis det indtastede er forkert kan der prøves igen ellers kommer interface skærmen. Her er mulighederne: Send besked, modtag besked, se historik og log ud. Ved send besked skærmen kan der skrives en besked, som efterfølgende sendes med metoden \texttt{sendBesked(besked, uName)}. Ved modtagBesked skærmen afventes der en besked. Den modtages med metoden \texttt{modtagBesked()} og bliver efterfølgende vist på skærmen. Hvis der vælges historik, kommer en skærm med 3 muligheder igen. Her kan der vælges at se hele historikken eller seneste besked som vises med metoderne \texttt{getHeleHistory()} og \texttt{getSenesteHistory()}. Den sidste valgmulighed er retur til interface skærmen.

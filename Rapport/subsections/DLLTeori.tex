@@ -1,24 +1,17 @@
 \subsection{Teori}
 \underline{\textbf{CRC}}
 \newline
-CRC står for Cyklisk Redundant Check, og bruges til fejl-detektering. Denne metode bruges generelt både til LAN og WAN netværk og bruges primærkt i datatransmission. Metoden bruges sommetider også i datalagring.
-Formålet med fejl-detektering er at gøre det muligt for modtageren at afgøre om en meddelelse, sendt gennem en støjet kanal, er blevet beskadiget.
-For at gøre dette konstruer senderen en værdi kaldet checksum, som er en funktion af meddelelsen, og føjer denne til meddelelsen.
-Modtageren er i stand til at bruge denne funktion til at beregne checksum af den modtagne meddelelse og sammenligne denne med den vedlagte kontrolsum for at se, om med meddelelsen er blevet modtaget korrekt.\cite{ross}
+CRC står for Cyklisk Redundant Check, og bruges til fejl-detektering.
+Formålet med fejl-detektering er at gøre det muligt for modtageren at afgøre om et datagram, sendt gennem en støjet kanal, er blevet beskadiget.
+For at gøre dette konstruer senderen en checksum og føjer denne til datagrammet.
+Modtageren er i stand til at bruge CRC til at beregne checksum af det modtagne datagram og sammenligne denne med den vedlagte checksum for at se, om datagrammet er blevet modtaget korrekt.\cite{ross}
 %CRC er i stand til at detektere og korrigere fejl i sekvenser af bits, og kan derfor bruges i datatransmission samt i datalagring, for at beskytte filer fra fejl.
 \newline
-I computer kommunikation anses bits ofte for at være uafhængige, og en bitsekvens vil være begrænset af størrelsen af datablokke.\cite{dllein}
-\newline
-CRC er baseret på polynomiel aritmetik, primært beregning af resten når et polynomium i GF(2) ( Galios felt med to elementer) divideres med et andet. Et polynomium i GF(2) er i et enkelt variabel x, hvis koefficenter er 0 eller 1. Addition og subtraktion udføres ved hjælp af modulo-2
+CRC er baseret på polynomiel aritmetik, primært beregning af resten når et polynomium divideres med et andet. Addition og subtraktion udføres ved hjælp af modulo-2.  %TILBAGE XOR ikke modulo
 \newline
 \textbf{Modulo-2 Binary Division}
 \newline
 Modulo er resten af en division mellem to tal, og er oftest udtrykt som "\%".
-\newline
-I division fås udtrykket:
-$$s = n \times d + r$$
-\newline
-Hvor s er dividenden, n er kvotienten, d er divisoren og r er resten.
 \newline
 I modulo defineres nye oprationer, som ofte ligner Boolske logiske operationer, heriblandt XOR, som bruges til addition, og AND, som bruges til mulitplikation.
 Bitvist er er modulo-2 det samme som XOR, og her noteres modulo-2 additions operationen med en cirkel med et plus, f.eks.: 
@@ -28,7 +21,4 @@ $$1 \oplus 0 = 1$$
 \hfill \break
 \underline{\textbf{Stuffing}}
 \newline
-Bitstuffing tilføjer ubrugte bits for at gøre datastrukturer nemmere at manipulere.
-\newline
-Stuffing tilføjes bitstrengen efter resten er fundet, ved hjælp af modulus. Hvis resten er 0 tilføjes "100", hvis resten er 1 tilføjes "10" og hvis resten er 2 tilføjes "1"
-giver mening i forhold til dataformat.
+Bitstuffing er nødvendig for datagrammer der ikke overholder de størrelsesmæssige krav. I dette tilfælde tilføres ekstra bits, uden betydning, til datagrammet, indtil dette opfylder de nødvendige størrelsesmæssige krav.
