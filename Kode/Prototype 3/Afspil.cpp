@@ -12,21 +12,12 @@ Afspil::~Afspil()
 
 void Afspil::sendData(std::vector<int> input)
 {	
-
-
 	//tonerTilAfspilning;
 	//addToner(input);
 	makeRaw0(input);
 	afspilToner(input.size());
 }
 
-void Afspil::addToner(std::vector<int> input)
-{
-	for (size_t i = 0; i < input.size(); i++)
-	{
-	tonerTilAfspilning.push_back(dtmfToner[input[i]]);
-	}
-}
 	
 void Afspil::makeRaw0(std::vector<int> input)
 {

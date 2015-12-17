@@ -17,7 +17,8 @@ Tone::Tone(int fekvens1, int fekvens2)
 	//Der genereres en samplet sinus kurve med 2 frekvenser, som gemmes i vectoren
 	for (unsigned i = 0; i < SAMPLES; i++)
 	{
-		raw1.push_back( AMPLITUDE*(sin(f1 * TWO_PI * i / SAMPLE_RATE) +sin(f2 * TWO_PI * i / SAMPLE_RATE)));
+		raw1.push_back( AMPLITUDE*(sin(f1 * TWO_PI * i / SAMPLE_RATE) 
+			+ sin(f2 * TWO_PI * i / SAMPLE_RATE)));
 	}
 	
 }
