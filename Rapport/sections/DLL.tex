@@ -40,7 +40,25 @@ Når transportlaget blev implementeret, blev meget mindre pakker sendt imellem a
 Dette blev udført kodemæssigt med et 8 bits CRC check, som er en simpel XOR operation på beskeden. For at sikre håndtering af bits, snarere end integers, skal bitset dataholdere benyttes.
 \newline
 Det valgte polynomie er: $x8 + x7 + x6 + x4 + x2 + 1$, hvilket tilsvarer 111010101 i bits. Dette polynomie vil finde alle single-bit errors, og uneven-bit errors.
-Kodemæssigt en metode runCRC() implementeret, som ses på følgende figur:
+Kodemæssigt en metode \texttt{runCRC()} implementeret, som ses på figur \ref{fig:crc}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm,height=20cm,keepaspectratio]{pictures/CRC.png}
+	\caption{\texttt{runCRC()}}
+	\label{fig:crc}
+\end{figure}
+\newline
+\texttt{runCRC(string bitstreng)} er den offentlige metode, der udregner en checksum ud fra en bitstreng af vilkårlig længde, vha. polynomiel division. Dette er implementeret ved at hente 9 bits fra den paddede besked, her kendt som \texttt{aug} (augmented message). Der skal kun udføres polynomiel division hver gang at MSB er 1, ellers skal nullet slettes, med mindre at checksummen er opnået. Den polynomielle divison er implementeret som et XOR af polynomiet, her kendt som divisor. Dette resultat bliver lavet til en ny \texttt{aug} string, som består af resultatet fra den polynomielle divison, og resten af beskeden som endnu ikke er blevet behandlet. Dette gentages indtil checksummen er opnået, som i et CRC-8’s tilfælde er 8 bits langt.
+\hfill \break
+
+\texttt{addStuffing(\textcolor{dkgreen}{string} bitstring)} er den metode, der beregner længden af den besked med checksum, og dernæst tilføjer stuffing for at opnå kompatibilitet med \texttt{ToneKonvertering} klassens metoder. Tilsvarende er der en metode, \texttt{removeStuffing(\textcolor{dkgreen}{string} bitstring)}, som fjerner stuffing. Denne kigger på det bit længst til højre i beskeden, og sletter indtil den finder et 1-tal. Dette 1-tal signalerer begyndelsen af stuffingen, og når denne er fjernet består beskeden af data og en checksum. \texttt{addStuffing()} og \texttt{removeStuffing()} kan ses på figur \ref{fig:stufft}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=25cm,keepaspectratio]{pictures/stuffingTogether.png}
+	\caption{\texttt{removeStuffing()} og \texttt{addStuffing()}}
+	\label{fig:stufft}
+\end{figure}
+
 \hfill \break
 
 \texttt{ToneKonvertering}s klassen fungerer som en basal oversætter, der transformerer datagrammet fra en bitstreng til en sekvens af lyde, som det fysiske lag kan behandle.
