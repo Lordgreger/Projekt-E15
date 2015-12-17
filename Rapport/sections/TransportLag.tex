@@ -1,0 +1,59 @@
+\section{Transportlaget}
+
+For at sikre at der pålideligt kan blive sendt beskeder mellem to applikationer er der brug for error control, hvilket normalt ligger hos transportlaget; Derfor oprettes et transportlag, selvom at det brugte system er et point-to-point netværk.
+
+\subsection{Teori}
+For at oprette et transportlag benyttes elementer fra stop-and-wait protokollen. Der benyttes både sender-og modtager buffere, samt inddeling af data i segmenter. Stop and wait er en connection-orienteret service, så den kan inddeles i tre dele: Oprettelse af forbindelse, data transfer, og nedbrydelse af forbindelse. Fordelene ved at bruge denne protokol er åbenlyst, når man arbejder med et point-to-point netværk hvor der ikke kan sendes data begge veje samtidig.
+
+\subsubsection{Oprettelse af forbindelse}
+
+Når der skal oprettes en forbindelse med stop-and-wait, skal senderen være aktivt åben. Den sender så en probe besked der indeholder information om resten af pakken, uden at indeholde data. Hvis modtageren skal kunne modtage skal den være passivt åben. Når den modtager en besked bliver den så aktivt åben, da den nu ved at der er nogen der forsøger at sende en pakke til den. Ved at sende et ACK tilbage skabes der således en forbindelse, da de nu begge ved at den anden er klar.
+
+\subsection{Data transfer}
+
+Efter forbindelsen er blevet oprettet, er det således muligt at sende data. Dette gøres ved inddele dataen i segmenter, der bliver nummerert. Dette sekvensnummer er en del af headeren, så når der modtages et segment er der ikke tvivl om det er det rigtige der bliver modtaget. Selv om segmenterne kun bliver sendt i rækkefølge er det stadig smart at give dem sekvensnumre, så det er muligt at prædefinerer hvor mange segmenter der bliver sendt, og kontrollere at de alle bliver modtaget.
+
+\subsubsection {Nedbrydelse af forbindelse}
+
+Når alt dataen er blevet sendt skal forbindelsen nedbrydes. Dette gøres ved et three-way-handshake, hvor den der lukke forbindelsen sender en besked med FIN flag, og sætter sig selv til aktivt lukket. Den anden sender et ACK tilbage på det, samtidig med at den bliver passivt lukket. Til sidst sender den der lukkede forbindelsen et sidste ACK, der fortæller at den modtog det andet handshake, hvorefter den lukker forbindelsen. Når det sidste ACK ankommer ved den anden lukker den forbindelsen. Hvis det sidste ACK bliver tabt lukker den selv forbindelsen når der er gået nok tid.
+
+\subsection{Implementation}
+
+Stop-and-wait er blevet implementeret fordi den tilbyder services der er meget brugbare i et point-to-point system hvor der ikke kan sendes og modtages samtidig.
+\subsubsection{Header}
+
+Først defineres headeren. Da der bruges nummerede segmenter indeholder headeren et sekvens nummer, i 8 bit, som samtidig benyttes som ACK på vej tilbage. Da der ikke bruges piggy-backing er der ikke nogen grund til at sende både et sekvens nummer og et ACK på samme tid, hvilket sparer plads i headeren. Ved at benytte en byte til segment nummering er det muligt at sende 255 segmenter, foruden den første, hvilket på dette tidspunkt vurderes at være rigeligt; Af denne årsag benyttes der ikke cirkulære buffere, men blot vektorer der kan indeholde samtlige beskeder, der bliver sendt og modtaget. Samtidig sendes der tre flag:
+
+\begin{itemize}
+\item FIN - et slut flag der sendes i det sidste segment.
+\item Accept - et accept flag der fortæller senderen at forbindelsen er godkendt
+\item Probe - et flag der fortæller modtageren at der bliver forsøgt at oprette en forbindelse
+\end{itemize}
+
+Strengt taget er disse flag ikke nødvendige i denne iteration, men de er inkluderet fordi de er nødvendige hvis applikationen skal udbygges til at kunde sende beskeder der har brug for mere end 255 segmenter. På nuværende tidspunkt er det klart at den første besked er proben, da denne altid har segment nummer 0, men hvis dette sekvents nummer skal kunne genbruges er der brug for et flag. FIN flaget er i samme situation, vi ved på nuværende tidspunkt at modtageren er i stand til at vide hvilket segment der er det sidste, men hvis der udviddes til en cirkulær buffer ved den ikke om det segment der er sat, som det sidste virkeligt er den sidste. Accept flaget er brugt for at reserverer muligheden til at afvise beskeder, hvis for eksempel der bliver bedt om at sende flere segmenter end modtageren kan klare.
+\\
+\subsubsection{Segment størrelse}
+
+Fordi der er en betydelig sandsynlighed for at pakker kan blive påvirket af støj er det meget brugbart at implementerer segmenter af en lille størrelse, så der ikke bliver spildt store pakker hvis et enkelt byte bliver påvirket. Dette påvirker sendehastigheden, så pakkerne skal heller ikke være for små, da der så skal sendes mange headere fra de forskellige lag, samtidig med at hver segment der bliver sendt afsted kræver et ACK tilbage. Derfor vælges en pakke længde på ti bytes, da headeren er på 11 bit, hvilket vil sige at der bliver sendt ca. 10 gange så meget data som headeren, hvis man ser bort fra headeren fra de andre lag.
+\\
+\subsubsection{Forbindelse}
+For at kunne oprette forbindelse mellem to applikationer skal der være en sender og en modtager. Senderen bliver, per teorien om oprettelse af forbindelse, sat til aktivt åben, mens der skal være en modtager der står som passivt åbent. Hvis dette er tifældet vil der blive sendt et ACK tilbage, og forbindelsen vil være åben. Da der ikke er brug for at blive sendt andet information end antallet af segmenter, samt at modtageren accepterer forbindelsen, er der ikke brug for et three-way-handshake, da piggy-backing ikke er blevet implementeret, fordi det blev vurderet at det ikke var den kompleksitet og tid værd det ville kræve at implementerer threads. Der bliver ikke sendt data med her, da det blev besluttet at det var vigtigere at senderen ikke stod og sendte unødvendig data hvis der ikke var en modtager.
+\\
+Når forbindelsen er oprettet sendes segmenterne et ad gangen, mens ACK med samme nummering sendes tilbage. Normalt sættes ACK til at være det næste forventede byte, men da der benyttes faste segment størrelser er det besluttet at det var mere praktisk at sætte dem til samme numre, da dette var en simplere løsning at implementerer i starten og slutningen af beskeden. 
+\\
+Når beskeden er sendt skal forbindelsen lukkes ned. For ikke at skulle ud i at sende tomme beskeder andre tidspunkter end i starten, bliver slut flaget sat i et segment der indeholder den sidste data, og senderen sættes til aktivt lukket. Dette segment er samtidig det eneste der kan have mindre end 10 bytes med ud over headers. Når modtageren modtager denne besked sættes den til passivt lukket, da den ved at der ikke kommer mere. Den sender dog et ACK tilbage, for at fortælle senderen at den har modtaget beskeden. Hvis senderen ikke modtager dette ACK, sender den segmentet igen, men hvis den modtager dette ACK lukker den forbindelsen helt. Modtageren vil dog forsøge at sende ACK flere gange, i forsøg på at sikre at senderen ved at beskeden er modtaget. Der blev valgt ikke at sende det sidste segment fra et three-way-handshake fordi det vigtigste er at modtageren får hele beskeden, og hvis dette handshake fejler vil et three-way-handshake også fejle. Havde der været tale om en duplex forbindelse ville situationen være anderledes, men med dette system er et two-way-handshake vurderet at være en god nok løsning. Når modtageren har sendt sit ACK nok gange vil den lukke sin forbindelse ned automatisk, og give beskeden videre til applikations laget.
+
+\subsection{Diskussion}
+
+Den måde transportlaget er implementeret giver error control, hvilket betyder at vi pålideligt kan sende date mellem to processer. Da der ikke arbejdes i et medium der er i stand til at sende fuld duplex, og hvor pakker ikke kan ankomme ude af rækkefølge, er der ikke brug for at implementerer en advanceret protokol som TCP, hvilket originalt var planen. Efter nogle overvejelser over hvad der nødvendigt at implementerer endte det med at den brugte protokol lignede stop-and-wait mere og mere. Til sidst blev TCP droppet fuldstændigt.
+\\
+Segmenternes størrelse kunne være optimeret på, man da hastighed ikke var en prioritet faldt valget på små størrelser, da disse er mere sikre overfor støj, da en enkelt forkert tone kun betyder at nogle få toner skal gensendes. Samtidig betyder den brugte segment størrelse at den længste besked der kan sendes i en bid er på 2550 tegn, hvilket svarer til en hel A4 side. Det blev vurderet at dette var nok til de mål der var blevet sat til projectet.
+\\
+Der kan argumenteres for at der skulle bruges fuldt three-way-handshake til at lukke forbindelsen, men fordi dette kun gav senderen mulighed for at vide om senderen vidste om beskeden var modtaget eller ej blev det valgt at dette ikke for vigtigt. Hvis det andet handshake fejler ved senderen jo alligevel ikke om beskeden er modtaget eller ej, og da der ikke bliver sendt data den anden vej er der ikke brug for et vindue hvor modtageren kan gøre sin besked færdig. I fremtidige itterationer kunne dette implementeres, men med denne var det ikke en prioritet at have kendskab til den andens status, men blot at sende beskeden.
+\hfill \break
+
+%\subsection{Del-konklusion}
+
+Formålet med at lave et transportlag var at opdele beskeder i segmenter, således at hele beskeden ikke går tabt hvis der forekommer støj, samt at lave error control, så det er forsikret at applikationen pålideligt kan sende beskeder.
+\\
+Dette er opnået ved at bruge de fordele der er ved stop-and-wait protokollen. Grundet den connection-orienterede natur er det muligt at sende data i en strøm hvor modtageren kan sikre sig at den data der bliver sendt er komplet og i rækkefølge, og at den er resistent overfor ikke-permanent støj, hvilket ville gøre at det ikke var muligt at sende pålideligt.

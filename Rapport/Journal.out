@@ -20,18 +20,29 @@
 \BOOKMARK [3][-]{subsubsection.4.4.2}{Disussion}{subsection.4.4}% 20
 \BOOKMARK [1][-]{section.5}{Data Link Laget}{}% 21
 \BOOKMARK [2][-]{subsection.5.1}{Teori}{section.5}% 22
-\BOOKMARK [1][-]{section.6}{Applikationslaget}{}% 23
-\BOOKMARK [2][-]{subsection.6.1}{Teori om persistens}{section.6}% 24
-\BOOKMARK [2][-]{subsection.6.2}{Controller klassen}{section.6}% 25
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Afsending af besked}{subsection.6.2}% 26
-\BOOKMARK [3][-]{subsubsection.6.2.2}{Modtagelse af besked}{subsection.6.2}% 27
-\BOOKMARK [3][-]{subsubsection.6.2.3}{\330vrige metoder i controller}{subsection.6.2}% 28
-\BOOKMARK [2][-]{subsection.6.3}{Login klassen}{section.6}% 29
-\BOOKMARK [2][-]{subsection.6.4}{Files klassen}{section.6}% 30
-\BOOKMARK [2][-]{subsection.6.5}{CharDefinition klassen}{section.6}% 31
-\BOOKMARK [2][-]{subsection.6.6}{UI source}{section.6}% 32
-\BOOKMARK [1][-]{section.7}{Konklusion}{}% 33
-\BOOKMARK [1][-]{section.8}{Perspektivering}{}% 34
-\BOOKMARK [1][-]{section.9}{Litteraturliste}{}% 35
-\BOOKMARK [2][-]{subsection.9.1}{B\370ger}{section.9}% 36
-\BOOKMARK [2][-]{subsection.9.2}{Hjemmesider}{section.9}% 37
+\BOOKMARK [2][-]{subsection.5.2}{Implementering}{section.5}% 23
+\BOOKMARK [1][-]{section.6}{Transportlaget}{}% 24
+\BOOKMARK [2][-]{subsection.6.1}{Teori}{section.6}% 25
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Oprettelse af forbindelse}{subsection.6.1}% 26
+\BOOKMARK [2][-]{subsection.6.2}{Data transfer}{section.6}% 27
+\BOOKMARK [3][-]{subsubsection.6.2.1}{Nedbrydelse af forbindelse}{subsection.6.2}% 28
+\BOOKMARK [2][-]{subsection.6.3}{Implementation}{section.6}% 29
+\BOOKMARK [3][-]{subsubsection.6.3.1}{Header}{subsection.6.3}% 30
+\BOOKMARK [3][-]{subsubsection.6.3.2}{Segment st\370rrelse}{subsection.6.3}% 31
+\BOOKMARK [3][-]{subsubsection.6.3.3}{Forbindelse}{subsection.6.3}% 32
+\BOOKMARK [2][-]{subsection.6.4}{Diskussion}{section.6}% 33
+\BOOKMARK [1][-]{section.7}{Applikationslaget}{}% 34
+\BOOKMARK [2][-]{subsection.7.1}{Teori om persistens}{section.7}% 35
+\BOOKMARK [2][-]{subsection.7.2}{Controller klassen}{section.7}% 36
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Afsending af besked}{subsection.7.2}% 37
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Modtagelse af besked}{subsection.7.2}% 38
+\BOOKMARK [3][-]{subsubsection.7.2.3}{\330vrige metoder i controller}{subsection.7.2}% 39
+\BOOKMARK [2][-]{subsection.7.3}{Login klassen}{section.7}% 40
+\BOOKMARK [2][-]{subsection.7.4}{Files klassen}{section.7}% 41
+\BOOKMARK [2][-]{subsection.7.5}{CharDefinition klassen}{section.7}% 42
+\BOOKMARK [2][-]{subsection.7.6}{UI source}{section.7}% 43
+\BOOKMARK [1][-]{section.8}{Konklusion}{}% 44
+\BOOKMARK [1][-]{section.9}{Perspektivering}{}% 45
+\BOOKMARK [1][-]{section.10}{Litteraturliste}{}% 46
+\BOOKMARK [2][-]{subsection.10.1}{B\370ger}{section.10}% 47
+\BOOKMARK [2][-]{subsection.10.2}{Hjemmesider}{section.10}% 48
