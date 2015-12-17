@@ -19,20 +19,19 @@
 \contentsline {subsection}{\numberline {4.4}Afspil}{16}{subsection.4.4}
 \contentsline {subsubsection}{\numberline {4.4.1}Implementation}{17}{subsubsection.4.4.1}
 \contentsline {subsubsection}{\numberline {4.4.2}Disussion}{18}{subsubsection.4.4.2}
-<<<<<<< HEAD
-\contentsline {section}{\numberline {5}Data Link Laget}{18}{section.5}
-\contentsline {subsection}{\numberline {5.1}Teori}{18}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Implementering}{19}{subsection.5.2}
+\contentsline {section}{\numberline {5}Data Link Laget}{19}{section.5}
+\contentsline {subsection}{\numberline {5.1}Teori}{19}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Implementering}{20}{subsection.5.2}
 \contentsline {section}{\numberline {6}Transportlaget}{21}{section.6}
 \contentsline {subsection}{\numberline {6.1}Teori}{21}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Oprettelse af forbindelse}{21}{subsubsection.6.1.1}
-\contentsline {subsection}{\numberline {6.2}Data transfer}{21}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Nedbrydelse af forbindelse}{21}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.1.1}Oprettelse af forbindelse}{22}{subsubsection.6.1.1}
+\contentsline {subsection}{\numberline {6.2}Data transfer}{22}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Nedbrydelse af forbindelse}{22}{subsubsection.6.2.1}
 \contentsline {subsection}{\numberline {6.3}Implementation}{22}{subsection.6.3}
 \contentsline {subsubsection}{\numberline {6.3.1}Header}{22}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Segment st\IeC {\o }rrelse}{22}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.2}Segment st\IeC {\o }rrelse}{23}{subsubsection.6.3.2}
 \contentsline {subsubsection}{\numberline {6.3.3}Forbindelse}{23}{subsubsection.6.3.3}
-\contentsline {subsection}{\numberline {6.4}Diskussion}{23}{subsection.6.4}
+\contentsline {subsection}{\numberline {6.4}Diskussion}{24}{subsection.6.4}
 \contentsline {section}{\numberline {7}Applikationslaget}{25}{section.7}
 \contentsline {subsection}{\numberline {7.1}Teori om persistens}{25}{subsection.7.1}
 \contentsline {subsection}{\numberline {7.2}Controller klassen}{25}{subsection.7.2}
@@ -48,22 +47,3 @@
 \contentsline {section}{\numberline {10}Litteraturliste}{32}{section.10}
 \contentsline {subsection}{\numberline {10.1}B\IeC {\o }ger}{32}{subsection.10.1}
 \contentsline {subsection}{\numberline {10.2}Hjemmesider}{32}{subsection.10.2}
-=======
-\contentsline {section}{\numberline {5}Data Link Laget}{19}{section.5}
-\contentsline {subsection}{\numberline {5.1}Teori}{19}{subsection.5.1}
-\contentsline {section}{\numberline {6}Applikationslaget}{20}{section.6}
-\contentsline {subsection}{\numberline {6.1}Teori om persistens}{20}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Controller klassen}{20}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Afsending af besked}{20}{subsubsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.2}Modtagelse af besked}{20}{subsubsection.6.2.2}
-\contentsline {subsubsection}{\numberline {6.2.3}\IeC {\O }vrige metoder i controller}{21}{subsubsection.6.2.3}
-\contentsline {subsection}{\numberline {6.3}Login klassen}{22}{subsection.6.3}
-\contentsline {subsection}{\numberline {6.4}Files klassen}{22}{subsection.6.4}
-\contentsline {subsection}{\numberline {6.5}CharDefinition klassen}{23}{subsection.6.5}
-\contentsline {subsection}{\numberline {6.6}UI source}{23}{subsection.6.6}
-\contentsline {section}{\numberline {7}Konklusion}{25}{section.7}
-\contentsline {section}{\numberline {8}Perspektivering}{26}{section.8}
-\contentsline {section}{\numberline {9}Litteraturliste}{27}{section.9}
-\contentsline {subsection}{\numberline {9.1}B\IeC {\o }ger}{27}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Hjemmesider}{27}{subsection.9.2}
->>>>>>> origin/master

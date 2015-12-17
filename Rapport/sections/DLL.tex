@@ -40,7 +40,7 @@ Når transportlaget blev implementeret, blev meget mindre pakker sendt imellem a
 Dette blev udført kodemæssigt med et 8 bits CRC check, som er en simpel XOR operation på beskeden. For at sikre håndtering af bits, snarere end integers, skal bitset dataholdere benyttes.
 \newline
 Det valgte polynomie er: $x8 + x7 + x6 + x4 + x2 + 1$, hvilket tilsvarer 111010101 i bits. Dette polynomie vil finde alle single-bit errors, og uneven-bit errors.
-Kodemæssigt bliver der først padded med 8 bits på beskeden. Dette bliver i slutningen af den polynomiale divison til checksummen. Dernæst bliver bits fra datagrammet, eller beskeden, taget ud, tilsvarende til længden af bits i polynomiet og dette bliver XOR’et med polynomiet. Dette gøres indtil der kun er bits i checksummen.
+Kodemæssigt en metode runCRC() implementeret, som ses på følgende figur:
 \hfill \break
 
 \texttt{ToneKonvertering}s klassen fungerer som en basal oversætter, der transformerer datagrammet fra en bitstreng til en sekvens af lyde, som det fysiske lag kan behandle.
@@ -57,3 +57,4 @@ Da der der ikke kan vides hvor mange toner der kommer af gangen, defineres 8 (DT
 Til det fysiske lag defineres et start flag og et slut flag, som henholdsvis tilsvarer tone 14(DTMF: \#) og tone 15(DTMF: d), da dette gør det nemmere for \texttt{MyRecoder} klassen at optage.
 \newline
  Al denne information indsættes i en vektor, som videre benyttes af andre klasser.
+ 
