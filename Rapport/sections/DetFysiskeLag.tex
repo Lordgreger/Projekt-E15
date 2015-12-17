@@ -200,7 +200,14 @@ For at gøre det nemmere at skrive funktionaliteterne for klasserne \texttt{MyRe
 \newline
 Når \texttt{ToneKonvertering} kalder \texttt{MyRecorder}, blev funktionaliteten for, hvorledes om en optagelse fanger en besked eller ej og om hvor lang en optagelse er, nødt til at blive implementeres under \texttt{ToneKonvertering}s metoden \texttt{returnBitString()}.
 \newline
-Der er blevet implementeret en while løkke, som kører enten indtil der er gået 10 sekunder, eller at en sluttone på en besked blev opfanget. Der er en if sætning der tester for, om en starttone er blevet hørt, hvis den fanges, skal timeren tælle til 10 forfra. Herefter returneres en vektor med alle de optagede toner. Dvs. at optagelsen altid vil være maks. 10 sekunder lang, hvilket resten af applikationen tager højde for.
+Der er blevet implementeret en while løkke, som kører enten indtil der er gået 10 sekunder, eller at en sluttone på en besked blev opfanget vist i  figur \ref{fig:returnbitstrengwhile}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{pictures/Returnbitstrengwhileloekke.PNG}
+	\caption{While løkke}
+	\label{fig:returnbitstrengwhile}
+\end{figure}
+ Der er en if sætning der tester for, om en starttone er blevet hørt, hvis den fanges, skal timeren tælle til 10 forfra. Herefter returneres en vektor med alle de optagede toner. Dvs. at optagelsen altid vil være maks. 10 sekunder lang, hvilket resten af applikationen tager højde for.
 \newline
 \texttt{MyRecorder} starter en optagelse med samplingsfrekvensen 8000 Hz i dens egen tråd, når metoden \texttt{start(8000)} bliver kaldt. \texttt{onProcessSampling()} kaldes hvert 10’ende millisekund i denne tråd. Under hvert kald bliver de optagede samples analyseret af Goertzel, som returnere tonen for de samples. Denne tone gemmes i \texttt{resusltatVektor}’en, som indeholder de toner, som hele optagelsen opfangede. Udover dette, sker der en mindre sortering af tonerne der optages under \texttt{onProcessSampling()} (dette fremgår ikke af sekvensdiagrammet). Tonerne skal ikke gemmes i \texttt{resusltatVektor}’en medmindre der først har været en starttone. Ved en sluttone stoppes \texttt{onProcessSampling()} for at blive kaldt igen, medmindre en helt ny optagelses session startes. Start og stop tonerne er blevet  defineret som tone 15 (D) = start og tone 14 (\#) = stop. Disse to toner bliver tilført som flag og taget højde for i de øvrige lag.
 
@@ -274,7 +281,14 @@ Hvert objekt køres igennem den før nævnte sinusoidale for løkke, og opretter
 \texttt{sendData()} er en offentlig metode, som sørger for at sende en besked, ved at bruge \texttt{makeRaw0()} og \texttt{afspilToner()}. Inputtet fra de øvrige lag, er en sekvens af integers, som symboliserer toner. 
 \hfill \break
 
-\texttt{makeRaw0()} sørger for, at lave en ny vektor, \texttt{\textcolor{dkgreen}{raw0}}, med sekvenser af tone data. \texttt{makeRaw0} slår op i vektoren \texttt{\textcolor{dkgreen}{dtmfToner}} i \texttt{Afspil} klassen når den får en besked den skal afspille, og kopier indholdet over i \texttt{\textcolor{dkgreen}{raw0}}. \texttt{\textcolor{dkgreen}{dtmfToner}} består af tone objekter og er sorteret fra 0 til 15, som er de integers der symboliserer hver tone. Hver gang \texttt{makeRaw0} har kopieret en tones data til vektoren, så lægger den 400 samples af tone 16 oven i, (400 samples er 50 millisekunder), netop fordi der skal være en pause af 50 millisekunder mellem hver tone jf. teori om DTMF.
+\texttt{makeRaw0()} sørger for, at lave en ny vektor, \texttt{\textcolor{dkgreen}{raw0}}, med sekvenser af tone data. \texttt{makeRaw0()} slår op i vektoren \texttt{\textcolor{dkgreen}{dtmfToner}} i \texttt{Afspil} klassen når den får en besked den skal afspille, og kopier indholdet over i \texttt{\textcolor{dkgreen}{raw0}} det kan ses i \ref{fig:makeRaw0}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=15cm,height=25cm,keepaspectratio]{pictures/makeRaw0.PNG}
+	\caption{Metode makeRaw0}
+	\label{fig:makeRaw0}
+\end{figure}
+ \texttt{\textcolor{dkgreen}{dtmfToner}} består af tone objekter og er sorteret fra 0 til 15, som er de integers der symboliserer hver tone. Hver gang \texttt{makeRaw0} har kopieret en tones data til vektoren, så lægger den 400 samples af tone 16 oven i, (400 samples er 50 millisekunder), netop fordi der skal være en pause af 50 millisekunder mellem hver tone jf. teori om DTMF.
 \newline
 \texttt{afspilToner()} afspiller altid \texttt{\textcolor{dkgreen}{raw0}}, dog skal metoden vide hvor mange elementer der afspilles som input.
 \hfill \break
