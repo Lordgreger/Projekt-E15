@@ -45,5 +45,6 @@
 \contentsline {section}{\numberline {8}Konklusion}{32}{section.8}
 \contentsline {section}{\numberline {9}Perspektivering}{33}{section.9}
 \contentsline {section}{\numberline {10}Litteraturliste}{34}{section.10}
-\contentsline {subsection}{\numberline {10.1}B\IeC {\o }ger}{34}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Hjemmesider}{34}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.1}Artikler}{34}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}B\IeC {\o }ger}{34}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Hjemmesider}{34}{subsection.10.3}
