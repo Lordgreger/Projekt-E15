@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  17 DEC 2015 10:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.12.7)  17 DEC 2015 10:32
 entering extended mode
 **Journal.tex
 (Journal.tex
@@ -1858,7 +1858,7 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
  (frontpage.tex
-<pictures/svg2.pdf, id=198, 597.23125pt x 592.8559pt>
+<pictures/svg2.pdf, id=202, 597.23125pt x 592.8559pt>
 File: pictures/svg2.pdf Graphic file (type pdf)
  <use pictures/svg2.pdf>
 Package pdftex.def Info: pictures/svg2.pdf used on input line 55.
@@ -2015,7 +2015,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 1.
 
-<pictures/Workload.png, id=293, 462.72874pt x 325.71687pt>
+<pictures/Workload.png, id=298, 462.72874pt x 325.71687pt>
 File: pictures/Workload.png Graphic file (type png)
 
 <use pictures/Workload.png>
@@ -2087,7 +2087,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 49.
- <pictures/DTMF.png, id=316, 232.87pt x 91.84312pt>
+ <pictures/DTMF.png, id=321, 232.87pt x 91.84312pt>
 File: pictures/DTMF.png Graphic file (type png)
  <use pictures/DTMF.png>
 Package pdftex.def Info: pictures/DTMF.png used on input line 53.
@@ -2168,7 +2168,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 125--131
 
  []
 
-<pictures/DTMFtabel.png, id=335, 244.915pt x 152.57pt>
+<pictures/DTMFtabel.png, id=340, 244.915pt x 152.57pt>
 File: pictures/DTMFtabel.png Graphic file (type png)
 
 <use pictures/DTMFtabel.png>
@@ -2194,14 +2194,14 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 146.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 146.
- <pictures/GRStruktur.png, id=343, 556.0775pt x 391.4625pt>
+ <pictures/GRStruktur.png, id=348, 556.0775pt x 391.4625pt>
 File: pictures/GRStruktur.png Graphic file (type png)
 
 <use pictures/GRStruktur.png>
 Package pdftex.def Info: pictures/GRStruktur.png used on input line 150.
 (pdftex.def)             Requested size: 284.52913pt x 200.30028pt.
 
-<pictures/Forloop.png, id=344, 266.49562pt x 72.77188pt>
+<pictures/Forloop.png, id=349, 266.49562pt x 72.77188pt>
 File: pictures/Forloop.png Graphic file (type png)
 
 <use pictures/Forloop.png>
@@ -2241,7 +2241,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 194--196
 
  []
 
-<pictures/Returnbitstrengwhileloekke.PNG, id=355, 305.34074pt x 131.89275pt>
+<pictures/Returnbitstrengwhileloekke.PNG, id=360, 305.34074pt x 131.89275pt>
 File: pictures/Returnbitstrengwhileloekke.PNG Graphic file (type png)
 
 <use pictures/Returnbitstrengwhileloekke.PNG>
@@ -2305,7 +2305,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 230--234
 
  []
 
-<pictures/DTMFkode.png, id=371, 321.70187pt x 65.24374pt>
+<pictures/DTMFkode.png, id=376, 321.70187pt x 65.24374pt>
 File: pictures/DTMFkode.png Graphic file (type png)
 
 <use pictures/DTMFkode.png>
@@ -2355,7 +2355,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 283--285
 
  []
 
-<pictures/makeRaw0.PNG, id=385, 412.54124pt x 122.859pt>
+<pictures/makeRaw0.PNG, id=390, 412.54124pt x 122.859pt>
 File: pictures/makeRaw0.PNG Graphic file (type png)
 
 <use pictures/makeRaw0.PNG>
@@ -2395,7 +2395,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 4.
 
-<pictures/Poly.png, id=394, 281.55188pt x 259.97125pt>
+<pictures/Poly.png, id=399, 281.55188pt x 259.97125pt>
 File: pictures/Poly.png Graphic file (type png)
  <use pictures/Poly.png>
 Package pdftex.def Info: pictures/Poly.png used on input line 12.
@@ -2409,7 +2409,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--24
 
  []
 
-<pictures/CRC.png, id=396, 431.36156pt x 238.64156pt>
+<pictures/CRC.png, id=401, 431.36156pt x 238.64156pt>
 File: pictures/CRC.png Graphic file (type png)
  <use pictures/CRC.png>
 Package pdftex.def Info: pictures/CRC.png used on input line 46.
@@ -2449,7 +2449,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 53.
 [20 <./pictures/Poly.png>]
-<pictures/stuffingTogether.png, id=411, 511.9125pt x 203.25937pt>
+<pictures/stuffingTogether.png, id=416, 511.9125pt x 203.25937pt>
 File: pictures/stuffingTogether.png Graphic file (type png)
 
 <use pictures/stuffingTogether.png>
@@ -2628,7 +2628,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 12.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 12.
- <pictures/SDsend.png, id=449, 722.09775pt x 482.40225pt>
+ <pictures/SDsend.png, id=454, 722.09775pt x 482.40225pt>
 File: pictures/SDsend.png Graphic file (type png)
 
 <use pictures/SDsend.png>
@@ -2639,7 +2639,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 23.
 
-<pictures/SDmodtagBesked.png, id=451, 938.50626pt x 625.33624pt>
+<pictures/SDmodtagBesked.png, id=456, 938.50626pt x 625.33624pt>
 File: pictures/SDmodtagBesked.png Graphic file (type png)
 
 <use pictures/SDmodtagBesked.png>
@@ -2720,7 +2720,7 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 76.
 
-<pictures/UIflow.png, id=473, 1051.5285pt x 1309.2915pt>
+<pictures/UIflow.png, id=478, 1051.5285pt x 1309.2915pt>
 File: pictures/UIflow.png Graphic file (type png)
 
 <use pictures/UIflow.png>
@@ -2746,7 +2746,7 @@ Package babel Info: Redefining danish shorthand "|
 (babel)             in language  on input line 93.
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 93.
-[30] <pictures/historik.PNG, id=481, 353.52075pt x 170.43675pt>
+[30] <pictures/historik.PNG, id=486, 353.52075pt x 170.43675pt>
 File: pictures/historik.PNG Graphic file (type png)
 
 <use pictures/historik.PNG>
@@ -2824,9 +2824,13 @@ Package babel Info: Redefining danish shorthand "|
 Package babel Info: Redefining danish shorthand "~
 (babel)             in language  on input line 6.
 Package babel Info: Redefining danish shorthand "|
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 9.
 Package babel Info: Redefining danish shorthand "~
-(babel)             in language  on input line 15.
+(babel)             in language  on input line 9.
+Package babel Info: Redefining danish shorthand "|
+(babel)             in language  on input line 18.
+Package babel Info: Redefining danish shorthand "~
+(babel)             in language  on input line 18.
 ) 
 AED: lastpage setting LastPage
 
@@ -2854,7 +2858,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
 Package rerunfilecheck Info: File `Journal.out' has not changed.
-(rerunfilecheck)             Checksum: D4CCF46FE49B7D6F34A12FA9582AFAC2;3134.
+(rerunfilecheck)             Checksum: AD99069599D59672FDB2729CDC21B563;3195.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
  )
 (\end occurred inside a group at level 1)
@@ -2862,13 +2866,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 52.
 ### semi simple group (level 1) entered at line 2 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33268 strings out of 493673
- 642401 string characters out of 3143960
+ 33273 strings out of 493673
+ 642462 string characters out of 3143960
  791772 words of memory out of 3000000
- 35608 multiletter control sequences out of 15000+200000
+ 35611 multiletter control sequences out of 15000+200000
  77022 words of font info for 260 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 57i,12n,97p,10363b,867s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,97p,10363b,870s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program
  Files/MiKTeX 2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Program Files/MiKTeX
@@ -2882,9 +2886,9 @@ urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on Journal.pdf (34 pages, 643189 bytes).
+Output written on Journal.pdf (34 pages, 644191 bytes).
 PDF statistics:
- 583 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 43485 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 590 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
+ 43493 words of extra memory for PDF output out of 51595 (max. 10000000)
 
