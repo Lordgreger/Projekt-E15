@@ -6,44 +6,49 @@
 \BOOKMARK [3][-]{subsubsection.3.1.2}{Metodebeskrivelse}{subsection.3.1}% 6
 \BOOKMARK [3][-]{subsubsection.3.1.3}{Afgr\346nsning}{subsection.3.1}% 7
 \BOOKMARK [2][-]{subsection.3.2}{Workload \(product backlog\)}{section.3}% 8
-\BOOKMARK [1][-]{section.4}{Det Fysiske Lag}{}% 9
-\BOOKMARK [2][-]{subsection.4.1}{Teori}{section.4}% 10
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Nyquist raten}{subsection.4.1}% 11
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Goertzel}{subsection.4.1}% 12
-\BOOKMARK [3][-]{subsubsection.4.1.3}{DTMF}{subsection.4.1}% 13
-\BOOKMARK [3][-]{subsubsection.4.1.4}{C++ og SFML}{subsection.4.1}% 14
-\BOOKMARK [3][-]{subsubsection.4.1.5}{Optag}{subsection.4.1}% 15
-\BOOKMARK [2][-]{subsection.4.2}{Implementering}{section.4}% 16
-\BOOKMARK [2][-]{subsection.4.3}{Diskussion}{section.4}% 17
-\BOOKMARK [2][-]{subsection.4.4}{Afspil}{section.4}% 18
-\BOOKMARK [3][-]{subsubsection.4.4.1}{Implementation}{subsection.4.4}% 19
-\BOOKMARK [3][-]{subsubsection.4.4.2}{Disussion}{subsection.4.4}% 20
-\BOOKMARK [1][-]{section.5}{Data Link Laget}{}% 21
-\BOOKMARK [2][-]{subsection.5.1}{Teori}{section.5}% 22
-\BOOKMARK [2][-]{subsection.5.2}{Implementering}{section.5}% 23
-\BOOKMARK [1][-]{section.6}{Transportlaget}{}% 24
-\BOOKMARK [2][-]{subsection.6.1}{Teori}{section.6}% 25
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Oprettelse af forbindelse}{subsection.6.1}% 26
-\BOOKMARK [2][-]{subsection.6.2}{Data transfer}{section.6}% 27
-\BOOKMARK [3][-]{subsubsection.6.2.1}{Nedbrydelse af forbindelse}{subsection.6.2}% 28
-\BOOKMARK [2][-]{subsection.6.3}{Implementation}{section.6}% 29
-\BOOKMARK [3][-]{subsubsection.6.3.1}{Header}{subsection.6.3}% 30
-\BOOKMARK [3][-]{subsubsection.6.3.2}{Segment st\370rrelse}{subsection.6.3}% 31
-\BOOKMARK [3][-]{subsubsection.6.3.3}{Forbindelse}{subsection.6.3}% 32
-\BOOKMARK [2][-]{subsection.6.4}{Diskussion}{section.6}% 33
-\BOOKMARK [1][-]{section.7}{Applikationslaget}{}% 34
-\BOOKMARK [2][-]{subsection.7.1}{Teori om persistens}{section.7}% 35
-\BOOKMARK [2][-]{subsection.7.2}{Controller klassen}{section.7}% 36
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Afsending af besked}{subsection.7.2}% 37
-\BOOKMARK [3][-]{subsubsection.7.2.2}{Modtagelse af besked}{subsection.7.2}% 38
-\BOOKMARK [3][-]{subsubsection.7.2.3}{\330vrige metoder i controller}{subsection.7.2}% 39
-\BOOKMARK [2][-]{subsection.7.3}{Login klassen}{section.7}% 40
-\BOOKMARK [2][-]{subsection.7.4}{Files klassen}{section.7}% 41
-\BOOKMARK [2][-]{subsection.7.5}{CharDefinition klassen}{section.7}% 42
-\BOOKMARK [2][-]{subsection.7.6}{UI source}{section.7}% 43
-\BOOKMARK [1][-]{section.8}{Konklusion}{}% 44
-\BOOKMARK [1][-]{section.9}{Perspektivering}{}% 45
-\BOOKMARK [1][-]{section.10}{Litteraturliste}{}% 46
-\BOOKMARK [2][-]{subsection.10.1}{Artilker}{section.10}% 47
-\BOOKMARK [2][-]{subsection.10.2}{B\370ger}{section.10}% 48
-\BOOKMARK [2][-]{subsection.10.3}{Hjemmesider}{section.10}% 49
+\BOOKMARK [1][-]{section.4}{Softwareudvikling AKA Greger er dum}{}% 9
+\BOOKMARK [2][-]{subsection.4.1}{Projektstyring}{section.4}% 10
+\BOOKMARK [2][-]{subsection.4.2}{Software Requirements Specification \(SRS\)}{section.4}% 11
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Id\351udvikling}{subsection.4.2}% 12
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Kravspecifikation}{subsection.4.2}% 13
+\BOOKMARK [1][-]{section.5}{Det Fysiske Lag}{}% 14
+\BOOKMARK [2][-]{subsection.5.1}{Teori}{section.5}% 15
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Nyquist raten}{subsection.5.1}% 16
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Goertzel}{subsection.5.1}% 17
+\BOOKMARK [3][-]{subsubsection.5.1.3}{DTMF}{subsection.5.1}% 18
+\BOOKMARK [3][-]{subsubsection.5.1.4}{C++ og SFML}{subsection.5.1}% 19
+\BOOKMARK [3][-]{subsubsection.5.1.5}{Optag}{subsection.5.1}% 20
+\BOOKMARK [2][-]{subsection.5.2}{Implementering}{section.5}% 21
+\BOOKMARK [2][-]{subsection.5.3}{Diskussion}{section.5}% 22
+\BOOKMARK [2][-]{subsection.5.4}{Afspil}{section.5}% 23
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Implementation}{subsection.5.4}% 24
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Disussion}{subsection.5.4}% 25
+\BOOKMARK [1][-]{section.6}{Data Link Laget}{}% 26
+\BOOKMARK [2][-]{subsection.6.1}{Teori}{section.6}% 27
+\BOOKMARK [2][-]{subsection.6.2}{Implementering}{section.6}% 28
+\BOOKMARK [1][-]{section.7}{Transportlaget}{}% 29
+\BOOKMARK [2][-]{subsection.7.1}{Teori}{section.7}% 30
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Oprettelse af forbindelse}{subsection.7.1}% 31
+\BOOKMARK [2][-]{subsection.7.2}{Data transfer}{section.7}% 32
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Nedbrydelse af forbindelse}{subsection.7.2}% 33
+\BOOKMARK [2][-]{subsection.7.3}{Implementation}{section.7}% 34
+\BOOKMARK [3][-]{subsubsection.7.3.1}{Header}{subsection.7.3}% 35
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Segment st\370rrelse}{subsection.7.3}% 36
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Forbindelse}{subsection.7.3}% 37
+\BOOKMARK [2][-]{subsection.7.4}{Diskussion}{section.7}% 38
+\BOOKMARK [1][-]{section.8}{Applikationslaget}{}% 39
+\BOOKMARK [2][-]{subsection.8.1}{Teori om persistens}{section.8}% 40
+\BOOKMARK [2][-]{subsection.8.2}{Controller klassen}{section.8}% 41
+\BOOKMARK [3][-]{subsubsection.8.2.1}{Afsending af besked}{subsection.8.2}% 42
+\BOOKMARK [3][-]{subsubsection.8.2.2}{Modtagelse af besked}{subsection.8.2}% 43
+\BOOKMARK [3][-]{subsubsection.8.2.3}{\330vrige metoder i controller}{subsection.8.2}% 44
+\BOOKMARK [2][-]{subsection.8.3}{Login klassen}{section.8}% 45
+\BOOKMARK [2][-]{subsection.8.4}{Files klassen}{section.8}% 46
+\BOOKMARK [2][-]{subsection.8.5}{CharDefinition klassen}{section.8}% 47
+\BOOKMARK [2][-]{subsection.8.6}{UI source}{section.8}% 48
+\BOOKMARK [1][-]{section.9}{Konklusion}{}% 49
+\BOOKMARK [1][-]{section.10}{Perspektivering}{}% 50
+\BOOKMARK [1][-]{section.11}{Litteraturliste}{}% 51
+\BOOKMARK [2][-]{subsection.11.1}{Artilker}{section.11}% 52
+\BOOKMARK [2][-]{subsection.11.2}{B\370ger}{section.11}% 53
+\BOOKMARK [2][-]{subsection.11.3}{Hjemmesider}{section.11}% 54

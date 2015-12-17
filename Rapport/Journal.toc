@@ -7,44 +7,49 @@
 \contentsline {subsubsection}{\numberline {3.1.2}Metodebeskrivelse}{7}{subsubsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.3}Afgr\IeC {\ae }nsning}{7}{subsubsection.3.1.3}
 \contentsline {subsection}{\numberline {3.2}Workload (product backlog)}{8}{subsection.3.2}
-\contentsline {section}{\numberline {4}Det Fysiske Lag}{9}{section.4}
-\contentsline {subsection}{\numberline {4.1}Teori}{9}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Nyquist raten}{9}{subsubsection.4.1.1}
-\contentsline {subsubsection}{\numberline {4.1.2}Goertzel}{9}{subsubsection.4.1.2}
-\contentsline {subsubsection}{\numberline {4.1.3}DTMF}{10}{subsubsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.4}C++ og SFML}{10}{subsubsection.4.1.4}
-\contentsline {subsubsection}{\numberline {4.1.5}Optag}{10}{subsubsection.4.1.5}
-\contentsline {subsection}{\numberline {4.2}Implementering}{13}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Diskussion}{15}{subsection.4.3}
-\contentsline {subsection}{\numberline {4.4}Afspil}{16}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}Implementation}{17}{subsubsection.4.4.1}
-\contentsline {subsubsection}{\numberline {4.4.2}Disussion}{19}{subsubsection.4.4.2}
-\contentsline {section}{\numberline {5}Data Link Laget}{19}{section.5}
-\contentsline {subsection}{\numberline {5.1}Teori}{19}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Implementering}{19}{subsection.5.2}
-\contentsline {section}{\numberline {6}Transportlaget}{22}{section.6}
-\contentsline {subsection}{\numberline {6.1}Teori}{22}{subsection.6.1}
-\contentsline {subsubsection}{\numberline {6.1.1}Oprettelse af forbindelse}{23}{subsubsection.6.1.1}
-\contentsline {subsection}{\numberline {6.2}Data transfer}{23}{subsection.6.2}
-\contentsline {subsubsection}{\numberline {6.2.1}Nedbrydelse af forbindelse}{23}{subsubsection.6.2.1}
-\contentsline {subsection}{\numberline {6.3}Implementation}{23}{subsection.6.3}
-\contentsline {subsubsection}{\numberline {6.3.1}Header}{23}{subsubsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.2}Segment st\IeC {\o }rrelse}{24}{subsubsection.6.3.2}
-\contentsline {subsubsection}{\numberline {6.3.3}Forbindelse}{24}{subsubsection.6.3.3}
-\contentsline {subsection}{\numberline {6.4}Diskussion}{25}{subsection.6.4}
-\contentsline {section}{\numberline {7}Applikationslaget}{27}{section.7}
-\contentsline {subsection}{\numberline {7.1}Teori om persistens}{27}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Controller klassen}{27}{subsection.7.2}
-\contentsline {subsubsection}{\numberline {7.2.1}Afsending af besked}{27}{subsubsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2}Modtagelse af besked}{27}{subsubsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.3}\IeC {\O }vrige metoder i controller}{28}{subsubsection.7.2.3}
-\contentsline {subsection}{\numberline {7.3}Login klassen}{29}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Files klassen}{29}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}CharDefinition klassen}{30}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}UI source}{30}{subsection.7.6}
-\contentsline {section}{\numberline {8}Konklusion}{32}{section.8}
-\contentsline {section}{\numberline {9}Perspektivering}{33}{section.9}
-\contentsline {section}{\numberline {10}Litteraturliste}{34}{section.10}
-\contentsline {subsection}{\numberline {10.1}Artilker}{34}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}B\IeC {\o }ger}{34}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Hjemmesider}{34}{subsection.10.3}
+\contentsline {section}{\numberline {4}Softwareudvikling AKA Greger er dum}{9}{section.4}
+\contentsline {subsection}{\numberline {4.1}Projektstyring}{9}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Software Requirements Specification (SRS)}{9}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Id\IeC {\'e}udvikling}{9}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Kravspecifikation}{10}{subsubsection.4.2.2}
+\contentsline {section}{\numberline {5}Det Fysiske Lag}{11}{section.5}
+\contentsline {subsection}{\numberline {5.1}Teori}{11}{subsection.5.1}
+\contentsline {subsubsection}{\numberline {5.1.1}Nyquist raten}{11}{subsubsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.2}Goertzel}{11}{subsubsection.5.1.2}
+\contentsline {subsubsection}{\numberline {5.1.3}DTMF}{12}{subsubsection.5.1.3}
+\contentsline {subsubsection}{\numberline {5.1.4}C++ og SFML}{12}{subsubsection.5.1.4}
+\contentsline {subsubsection}{\numberline {5.1.5}Optag}{13}{subsubsection.5.1.5}
+\contentsline {subsection}{\numberline {5.2}Implementering}{15}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}Diskussion}{17}{subsection.5.3}
+\contentsline {subsection}{\numberline {5.4}Afspil}{18}{subsection.5.4}
+\contentsline {subsubsection}{\numberline {5.4.1}Implementation}{19}{subsubsection.5.4.1}
+\contentsline {subsubsection}{\numberline {5.4.2}Disussion}{21}{subsubsection.5.4.2}
+\contentsline {section}{\numberline {6}Data Link Laget}{21}{section.6}
+\contentsline {subsection}{\numberline {6.1}Teori}{21}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Implementering}{21}{subsection.6.2}
+\contentsline {section}{\numberline {7}Transportlaget}{24}{section.7}
+\contentsline {subsection}{\numberline {7.1}Teori}{24}{subsection.7.1}
+\contentsline {subsubsection}{\numberline {7.1.1}Oprettelse af forbindelse}{25}{subsubsection.7.1.1}
+\contentsline {subsection}{\numberline {7.2}Data transfer}{25}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Nedbrydelse af forbindelse}{25}{subsubsection.7.2.1}
+\contentsline {subsection}{\numberline {7.3}Implementation}{25}{subsection.7.3}
+\contentsline {subsubsection}{\numberline {7.3.1}Header}{25}{subsubsection.7.3.1}
+\contentsline {subsubsection}{\numberline {7.3.2}Segment st\IeC {\o }rrelse}{26}{subsubsection.7.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3}Forbindelse}{26}{subsubsection.7.3.3}
+\contentsline {subsection}{\numberline {7.4}Diskussion}{27}{subsection.7.4}
+\contentsline {section}{\numberline {8}Applikationslaget}{29}{section.8}
+\contentsline {subsection}{\numberline {8.1}Teori om persistens}{29}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Controller klassen}{29}{subsection.8.2}
+\contentsline {subsubsection}{\numberline {8.2.1}Afsending af besked}{29}{subsubsection.8.2.1}
+\contentsline {subsubsection}{\numberline {8.2.2}Modtagelse af besked}{29}{subsubsection.8.2.2}
+\contentsline {subsubsection}{\numberline {8.2.3}\IeC {\O }vrige metoder i controller}{30}{subsubsection.8.2.3}
+\contentsline {subsection}{\numberline {8.3}Login klassen}{31}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Files klassen}{31}{subsection.8.4}
+\contentsline {subsection}{\numberline {8.5}CharDefinition klassen}{32}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}UI source}{32}{subsection.8.6}
+\contentsline {section}{\numberline {9}Konklusion}{34}{section.9}
+\contentsline {section}{\numberline {10}Perspektivering}{35}{section.10}
+\contentsline {section}{\numberline {11}Litteraturliste}{36}{section.11}
+\contentsline {subsection}{\numberline {11.1}Artilker}{36}{subsection.11.1}
+\contentsline {subsection}{\numberline {11.2}B\IeC {\o }ger}{36}{subsection.11.2}
+\contentsline {subsection}{\numberline {11.3}Hjemmesider}{36}{subsection.11.3}
