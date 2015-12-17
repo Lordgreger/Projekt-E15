@@ -13,7 +13,6 @@ public:
 	void sendData(std::vector<int> input);
 
 protected:
-	void addToner(std::vector<int> input);
 	void makeRaw0(std::vector<int> input);
 	int afspilToner(int længdeAfElementer);
 
@@ -22,7 +21,6 @@ protected:
 									 new Tone(852, 1209), new Tone(852, 1336), new Tone(852, 1477), new Tone(852, 1633),
 									 new Tone(941, 1209), new Tone(941, 1336), new Tone(941, 1477), new Tone(941, 1633),
 									 new Tone(0,0)};
-	std::vector<Tone*> tonerTilAfspilning;
 	const unsigned SAMPLES = 1600;
 	const unsigned SAMPLE_RATE = 8000;
 	std::vector <sf::Int16>  raw0 = {0};
