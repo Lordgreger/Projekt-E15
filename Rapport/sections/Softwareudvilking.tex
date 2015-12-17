@@ -42,14 +42,63 @@ Udover at applikationen har nogle funktionaliteter, skal applikationen også hav
 Kravene er som følger:
 \begin{itemize}
 	\item Sende beskeder mellem 2 applikationer
-	
 	\item Brugergrænseflade
-	
 	\item Pålidelig dataoverførsel
-	
 	\item Fejl testning af beskeder
-	
 	\item Se tidligere sendte og modtagede beskeder
-	
 	\item Login
 \end{itemize}
+
+\subsection{Softwareudvikling}
+For at opbygge en velfungerende applikation,  er det imperativt at følge principperne indenfor softwareudvikling.
+
+\subsubsection{Analyse fasen}
+Der blev udarbejdet use cases, som viser hvordan brugeren interagerer med programmet, og som derudover hjælper til at afdække krav til applikation.
+\newline
+De use cases der blev udarbejdet var:
+\begin{itemize}
+	\item Login
+	\item Historik
+	\item Send besked
+	\item Modtag besked
+\end{itemize}
+Use case over Send besked kan ses på figur HOMOSEXUEL og de resterende use cases kan findes i bilag BILLAG.
+\hfill \break
+Disse use cases blev brugt til at udarbejde en domænemodel, som kan ses i figur 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{pictures/Domainmodel.png}
+	\caption{Domænemodel}
+	\label{fig:dom}
+\end{figure}
+\newline
+Domæne modellen giver et simpelt indblik i hvordan applikationen skal fungere.
+\hfill \newline
+Udover at domæne modellen lægger op til at vi har som minimum fire klasser, blev det konstateret at der er behov for tre yderlige klasser, som opfylder følgende krav fra SRS, da de ikke blev afdækket af use casene: pålidelig dataoverførsel, brugergrænseflade og fejl testning af beskeder. Disse klasser blev midlertidigt navngivet \texttt{Fejlkontrol}, \texttt{UI} og \texttt{Levering}.
+
+\subsubsection{Design klassen}
+For at udarbejde et design klasse diagram blev der taget udgangspunkt i domænemodellen. Ved udvidelse og tilpasning af klasse diagrammet blev der anvendt design mønstre fra GRASP.
+\newline
+Jf. GRASP skal der være en controller, som er det første objekt efter en UI der modtager og koordinerer et systems operationer. Denne klasse bliver oprettet og snedigt kaldet Controller.
+\newline
+En skabelon for klasse diagrammet blev lavet, på baggrund af denne udvides og tilpasses den til et klasse diagram i en iterativ proces.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=10cm,height=10cm,keepaspectratio]{pictures/Flow.png}
+	\caption{Flowmodel}
+	\label{fig:flow}
+\end{figure}
+\newline
+Under den iterative proces blev nogle meget generelle funktionaliteter undersøgt - hvordan man sender en besked og modtager en besked. Disse lagde op til nogle diskussioner og problemstillinger som diskuteres senere i rapporten. Grundet den iterative proces blev Send besked og Modtag besked omdybt til \texttt{Afspil} og \texttt{MyRecorder} for bedre at afspejle deres ansvarsområde. Jf. GRASPs principper havde disse klasser yderst lav kobling, men også lav cohesion grundet at der var mere ansvar i klasserne end de antydede. Derfor blev det konkluderet at disse ansvarsområder skulle deles op for at skabe højere cohesion. \texttt{Afspil} klassen havde ansvaret for at afspille toner, men ikke ansvaret for også at genererer toner. Derfor blev der lavet en information expert der påtog sig ansvaret at holde information omkring toner,netop klassen \texttt{Tone}. \texttt{MyRecorder} havde ligeledes kun et ansvar - at optage. Ansvaret for at analyserer optagelsen blev derfor tillagt en pure fabricated klasse ved navn \texttt{Goertzel}, for igen at øge cohesion.
+\hfill \break
+
+Senere i den iterative proces blev der draget inspiration fra datakommunikations lagdelte struktur - Open Systems Interconnection modellen (OSI). I denne model indgår der to lag, som afspejler klasserne Lervering- og Fejlkontrols ansvarsområde, nemlig: Datalinklaget(DLL) og Transportlaget. Klasse \texttt{Levering} er således blevet omdøbt til Transportlag, og \texttt{Fejlkontrol} er blevet omdøbt til \texttt{DLL}.
+\newline
+Grundet den iterative proces indeholdte DLL flere ansvarsområder end først forventet. Dette gjorde at man også her var nødsaget til at opdele ansvarsområdet. Der blev derfor pure fabricated en klasse, som ydede en service til DLL. Denne klasse fik navnet \texttt{CRC}, baseret på dens service.
+\hfill \break
+Disse udvidelser på klasse diagrammet skabte en ny problemstilling, de forskellige klasser snakker ikke i samme data format. Dataformaterne der snakkes i, er char strings, bit strings og tone chars.
+\newline
+Derfor blev der indført to klasser baseret over adapter pattern princippet, hvis formål var at oversætte dataformatet mellem de forskellige klasser. Adapter klasserne blev kaldt \texttt{CharDefinition} og \texttt{Tonekonvertering}.
+\hfill \break
+Efter projektets sidste iteration endtes der ud med et klasse diagram der kan ses på næste side.
+\afterpage{\null\newpage}
