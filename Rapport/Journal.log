@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.15)  16 DEC 2015 23:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.5.15)  17 DEC 2015 00:56
 entering extended mode
 **Journal.tex
 (C:\Gitmappe\Projekt-E15\Rapport\Journal.tex
@@ -2192,14 +2192,14 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [19] (C:\Gitmappe\Projekt-E15\Rapport\sections/Applikationslaget.tex
-<pictures/SDsend.png, id=347, 722.09775pt x 482.40225pt>
+<pictures/SDsend.png, id=348, 722.09775pt x 482.40225pt>
 File: pictures/SDsend.png Graphic file (type png)
 
 <use pictures/SDsend.png>
 Package pdftex.def Info: pictures/SDsend.png used on input line 16.
 (pdftex.def)             Requested size: 426.78323pt x 285.11539pt.
 
-<pictures/SDmodtagBesked.png, id=349, 938.50626pt x 625.33624pt>
+<pictures/SDmodtagBesked.png, id=350, 938.50626pt x 625.33624pt>
 File: pictures/SDmodtagBesked.png Graphic file (type png)
 
 <use pictures/SDmodtagBesked.png>
@@ -2233,7 +2233,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [22 <C:/Gitmappe/Projekt-E15/Rapport/pictures/SDmodtagBesked.png>]
-<pictures/UIflow.png, id=370, 1051.5285pt x 1309.2915pt>
+<pictures/UIflow.png, id=372, 1051.5285pt x 1309.2915pt>
 File: pictures/UIflow.png Graphic file (type png)
 
 <use pictures/UIflow.png>
@@ -2251,7 +2251,13 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[23])
+[23] <pictures/historik.PNG, id=380, 353.52075pt x 170.43675pt>
+File: pictures/historik.PNG Graphic file (type png)
+
+<use pictures/historik.PNG>
+Package pdftex.def Info: pictures/historik.PNG used on input line 100.
+(pdftex.def)             Requested size: 341.44746pt x 164.61604pt.
+)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2266,7 +2272,8 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[25] (C:\Gitmappe\Projekt-E15\Rapport\sections/Perspektivering.tex)
+[25 <C:/Gitmappe/Projekt-E15/Rapport/pictures/historik.PNG>]
+(C:\Gitmappe\Projekt-E15\Rapport\sections/Perspektivering.tex)
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -2297,29 +2304,30 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 74.
 ### semi simple group (level 1) entered at line 2 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 33093 strings out of 493921
- 643494 string characters out of 3144873
- 780855 words of memory out of 3000000
- 35418 multiletter control sequences out of 15000+200000
- 76494 words of font info for 252 fonts, out of 3000000 for 9000
+ 33111 strings out of 493921
+ 643853 string characters out of 3144873
+ 780854 words of memory out of 3000000
+ 35429 multiletter control sequences out of 15000+200000
+ 76757 words of font info for 255 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 57i,12n,97p,10363b,858s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 57i,12n,97p,10363b,868s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.
 enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/txfonts/rtcxr.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/txfonts/rtxb.pfb><C:/Program Fi
-les (x86)/MiKTeX 2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/txfonts/t1xtt.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/txfonts/txex.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/txfonts/txsy.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8
-a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Journal.pdf (27 pages, 548819 bytes).
+les (x86)/MiKTeX 2.9/fonts/type1/public/txfonts/rtxi.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/txfonts/rtxmi.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/txfonts/rtxr.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
+nts/type1/public/txfonts/t1xtt.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/txfonts/txex.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publi
+c/txfonts/txsy.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utm
+b8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Journal.pdf (27 pages, 586750 bytes).
 PDF statistics:
- 464 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
- 43377 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 90 named destinations out of 1000 (max. 500000)
+ 43382 words of extra memory for PDF output out of 51595 (max. 10000000)
 

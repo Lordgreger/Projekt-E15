@@ -4,7 +4,7 @@ Applikationslagets formål er at skabe en platform for en bruger, så der ikke b
 I dette afsnit gives teorien bag persistens og beskrivelse af de klasser som bruges i applikationslaget. Desuden er der en gennemgang af appilkationens user interface.
 
 \subsection{Teori om persistens}
-Persistens er en problemstilling, der skal tages højde for, når man gerne vil bruge data mellem forskellige instanser af en applikation. For at  kalde din data persistent skal man også kunne få adgang til dataen, selvom at applikationen har været lukket ned i mellemtiden. For at kunne lave dataen persistent skal man først bestemme sig for, hvordan man vil gemme sin data. Dette kan gøres på forskellige måder, så som at gemme det i filer eller gemme det på en database. For at kunne aflæse dataen nemt, skal der opstilles retningslinjer for din data. Dette kunne for eksempel være, at hver gang der gemmes noget nyt i en fil, skal der være på en ny linje.
+Persistens er en problemstilling, der skal tages højde for, når man gerne vil bruge data mellem forskellige instanser af en applikation. For at  kalde din data persistent skal man også kunne få adgang til dataen, selvom at applikationen har været lukket ned i mellemtiden. For at kunne lave dataen persistent skal man først bestemme sig for, hvordan man vil gemme sin data. Dette kan gøres på forskellige måder, så som at gemme det i filer eller gemme det på en database. For at kunne aflæse dataen nemt, skal der opstilles retningslinjer for din data. Dette kunne for eksempel være, at hver gang der gemmes noget nyt i en fil, skal der være på en ny linje\cite{oosa}.
 
 \subsection{Controller klassen}
 Der blev valgt at samle programmets vigtigste funktioner i klassen \texttt{Controller}. Dette blev gjort for at user interface kun skulle i kontakt med én klasse og fordi det ville blive nemmere i en senere iteration at implementere et Grafisk User Interface (GUI).
@@ -92,4 +92,13 @@ På interface skærmen er mulighederne:
 	\item Se historik 
 	\item Log ud
 \end{itemize}
-Ved "Send besked" skærmen kan der skrives en besked, som efterfølgende sendes med metoden \texttt{sendBesked(besked, uName)} fra \texttt{Controller}. Ved "Modtag besked" skærmen afventes der en besked. Denne modtages med metoden \texttt{modtagBesked()} og bliver efterfølgende vist på skærmen. Hvis der vælges historik, kommer en skærm med 3 muligheder igen. Her kan der vælges at se hele historikken eller seneste besked som vises med metoderne \texttt{getHeleHistory()} og \texttt{getSenesteHistory()} fra \texttt{Controller}. Den ved den sidste valgmulighed sendes man retur til interface skærmen.
+Ved "Send besked" skærmen kan der skrives en besked, som efterfølgende sendes med metoden \texttt{sendBesked(besked, uName)} fra \texttt{Controller}. Ved "Modtag besked" skærmen afventes der en besked. Denne modtages med metoden \texttt{modtagBesked()} og bliver efterfølgende vist på skærmen.
+//
+Hvis der vælges historik, kommer en skærm med 3 muligheder igen. Her kan der vælges at se hele historikken eller seneste besked som vises med metoderne \texttt{getHeleHistory()} og \texttt{getSenesteHistory()} fra \texttt{Controller}. Den ved den sidste valgmulighed sendes man retur til interface skærmen, dette kan ses i figur \ref{fig:historik}.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=12cm,height=22cm,keepaspectratio]{pictures/historik.PNG}
+	\caption{Label historikScreen}
+	\label{fig:historik}
+\end{figure}
+For at kunne holde styre vores UI har vi valgt at bruge kommandoen GOTO som kan springe i mellem labels. For at vælge en af de givne valgmuligheder har vi brugt if sætninger til analysere inputtet fra kommandoen cin

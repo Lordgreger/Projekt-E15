@@ -285,7 +285,7 @@ Hvert objekt køres igennem den før nævnte sinusoidale for løkke, og opretter
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=15cm,height=25cm,keepaspectratio]{pictures/makeRaw0.PNG}
-	\caption{Metode makeRaw0()}
+	\caption{Metode makeRaw0}
 	\label{fig:makeRaw0}
 \end{figure}
  \texttt{\textcolor{dkgreen}{dtmfToner}} består af tone objekter og er sorteret fra 0 til 15, som er de integers der symboliserer hver tone. Hver gang \texttt{makeRaw0} har kopieret en tones data til vektoren, så lægger den 400 samples af tone 16 oven i, (400 samples er 50 millisekunder), netop fordi der skal være en pause af 50 millisekunder mellem hver tone jf. teori om DTMF.
